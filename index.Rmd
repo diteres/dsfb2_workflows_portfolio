@@ -1,0 +1,26 @@
+--- 
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "Portfolio created using the bookdown package as part of the DSFB2 course."
+---
+# Introduction {-}
+
+This portfolio was created using the bookdown package as part of the DSFB2 course. 
+
+The content of this portfolio is as follows:
+
+- Curriculum Vitae: contains personal information and contact details.
+
+P.s. Although I made the stylistic choices myself, the custom CSS file was created with AI assistance. 
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

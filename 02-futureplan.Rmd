@@ -1,0 +1,24 @@
+# My future vision {-}
+
+## Short-Term Perspective (1–3 Years) {-} 
+
+In one or two years, I plan to pursue a pre-master’s and master’s degree in either chemistry or genomics. Choosing chemistry would allow me to develop a broader perspective on research and develop a wider worldview in general. At the same time, I simply adore genomics. 
+
+I have not yet decided which path I will choose, but I hope that during my 10-month internship (which I am still searching for) I will have enough time to make my decision about my academic future.
+
+## Long-Term Perspective (3–5 Years) {-}
+
+From a longer-term perspective, I would like to gain work experience in a research facility, preferably in academic research. In my daily work life, I would like to work in both dry and wet lab environments.
+
+Moreover, I would love to participate in experimental design, as I have a creative personality and many unrealized ideas that I would like to explore.
+
+## Current Situation {-}
+During my studies, I have gained hands-on experience with biomolecular laboratory techniques such as PCR, gel electrophoresis, Western blotting, cell culture, histological techniques, and bright-field and fluorescence microscopy.
+
+At the moment, I am also pursuing a minor in Data Science to develop my computational skills. I have already gained some hands-on experience with R and Bash and learned how to use GitHub for collaborative projects, although I still have a lot to learn.
+
+## What I Still Need to Learn {-}
+* Gain more experience in a professional research environment through an internship 
+* Improve soft skills, especially networking and self-presentation
+* Strengthen my computational skills, particularly in R
+* Deepen my knowledge of  genomics research, for example RNA-seq data analysis (See Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R)

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit</title>
+  <meta name="description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit" />
+  
+  <meta name="twitter:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="plan-for-the-future.html"/>
+<link rel="next" href="data-management.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>Diana Tereshchenko | Portfolio</strong></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html"><i class="fa fa-check"></i>Curriculum vitae</a>
+<ul>
+<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#about"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#education"><i class="fa fa-check"></i>Education</a></li>
+<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#contact"><i class="fa fa-check"></i>Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="plan-for-the-future.html"><a href="plan-for-the-future.html"><i class="fa fa-check"></i>Plan for the future</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><i class="fa fa-check"></i>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R</a>
+<ul>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#introduction-1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#background-difference-between-gsea-and-ora"><i class="fa fa-check"></i>Background | Difference between GSEA and ORA</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#data-description-research-question"><i class="fa fa-check"></i>Data description &amp; Research question</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i>Data management</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible science</a></li>
+<li class="chapter" data-level="" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i>SQL</a></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html"><i class="fa fa-check"></i>ggplot2: ravenplot</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><i class="fa fa-check"></i>Parameterized Rmarkdown report: The number of COVID-19 cases in Europe</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="all-things-from-book-demo.html"><a href="all-things-from-book-demo.html"><i class="fa fa-check"></i>all things from book demo</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r" class="section level1 unnumbered hasAnchor">
+<h1>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 unnumbered hasAnchor">
+<h2>Introduction<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>During DSFB1 course, I have learned how to perform ORA Gene Enrichment analysis for an RNA-sequencing experiment and applied it on the provided dataset for the final assessment.</p>
+<p>To further deepen my knowledge of RNA analysis, I want to learn how to perform another type of RNA-seq enrichment analysis: GSEA.</p>
+<p>In this self-study assignment, I want to:</p>
+<ul>
+<li><p>Learn how enrichment methodology affect the biological interpretation of RNA-seq data and compare the previous ORA results with a new GSEA analysis using the same DESeq2 dataset.</p></li>
+<li><p>Obtain a more complete picture of the previously used data.</p></li>
+</ul>
+</div>
+<div id="background-difference-between-gsea-and-ora" class="section level2 unnumbered hasAnchor">
+<h2>Background | Difference between GSEA and ORA<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#background-difference-between-gsea-and-ora" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Difference between GSEA and ORA:
+ORA uses a threshold-filtered list of significant genes, while GSEA uses all genes ranked by expression change. ORA is ideal for quick, high-magnitude gene lists, whereas GSEA excels at identifying subtle, coordinated changes in entire pathways.</p>
+<p><a href="https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data" class="uri">https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data</a></p>
+</div>
+<div id="data-description-research-question" class="section level2 unnumbered hasAnchor">
+<h2>Data description &amp; Research question<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#data-description-research-question" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data is obtained from <a href="https://academic.oup.com/nar/article/47/11/5587/5485068?login=false">this research</a>.</p>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.2.1     ✔ readr     2.2.0
+## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+## ✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+## ✔ purrr     1.2.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 1: </span>Sample metadata table</caption>
+<thead>
+<tr class="header">
+<th align="left">GEO.Sample.id</th>
+<th align="left">Cell.line</th>
+<th align="left">Treatment</th>
+<th align="left">Run.id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">GSM3393013</td>
+<td align="left">Fibroblast line 1 (CL1500023)</td>
+<td align="left">BCLXL</td>
+<td align="left">SRR7866699</td>
+</tr>
+<tr class="even">
+<td align="left">GSM3393014</td>
+<td align="left">Fibroblast line 1 (CL1500023)</td>
+<td align="left">BCLXL</td>
+<td align="left">SRR7866700</td>
+</tr>
+<tr class="odd">
+<td align="left">GSM3393015</td>
+<td align="left">Fibroblast line 1 (CL1500023)</td>
+<td align="left">ONECUT1</td>
+<td align="left">SRR7866701</td>
+</tr>
+<tr class="even">
+<td align="left">GSM3393016</td>
+<td align="left">Fibroblast line 1 (CL1500023)</td>
+<td align="left">ONECUT1</td>
+<td align="left">SRR7866702</td>
+</tr>
+</tbody>
+</table>
+<p>Research question: Do ORA and GSEA lead to the same biological interpretation of ONECUT1-induced fibroblast transdifferation?</p>
+<p>Subquestions:
+- Are GO terms found by ORA and GSEA the same?
+- Does neurogenesis/nervous system development still appear?
+- Do apoptotic processes remain enriched?
+- Do GSEA find subtler pathways that were missed by ORA?
+- To what extend do conclusions depend on the padj &lt;0.01 and LFC &gt; 1?
+- What is the difference in the results of GSEA GO term analysis and KEGG pathways analysis?</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="plan-for-the-future.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-management.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": false,
+    "twitter": false,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": false,
+    "google": false
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/diteres/dsfb2_workflows_portfolio/edit/master/03-enrichmentanalysis.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

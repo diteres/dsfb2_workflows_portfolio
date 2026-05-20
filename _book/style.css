@@ -1,0 +1,426 @@
+/* =========================================================
+   Vintage Bookdown Theme
+   Fonts:
+   - H1 / title: Sancreek
+   - Body: Cormorant Garamond
+   - H2: Cinzel
+   - H3-H6: Cormorant SC
+   Palette:
+   - Ink: #3A2F24
+   - Muted brown: #7A6A55
+   - Aged gold: #BDAA86
+   - Parchment: #F3E9D2
+   - Rust: #8B3E2F
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Sancreek&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+SC:wght@400;500;600;700&display=swap');
+
+:root {
+  --vintage-ink: #3A2F24;
+  --vintage-muted: #7A6A55;
+  --vintage-gold: #BDAA86;
+  --vintage-paper: #F3E9D2;
+  --vintage-paper-dark: #E7DCC3;
+  --vintage-rust: #8B3E2F;
+  --vintage-code-bg: #EFE5D0;
+  --vintage-border: #C9B28B;
+}
+
+/* Global page background */
+
+html,
+body,
+.book,
+.book-body,
+.body-inner,
+.page-wrapper,
+.page-inner {
+  background-color: var(--vintage-paper) !important;
+  color: var(--vintage-ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+
+body {
+  background-image:
+    radial-gradient(rgba(58, 47, 36, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+  background-size: 7px 7px, 100% 100%;
+}
+
+/* GitBook content area  */
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.2rem 3rem 4rem 3rem !important;
+  background-color: var(--vintage-paper) !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  background-color: var(--vintage-paper) !important;
+  background-image:
+    radial-gradient(rgba(58, 47, 36, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.20), rgba(255,255,255,0.04));
+  background-size: 6px 6px, 100% 100%;
+  border: 1px solid var(--vintage-border);
+  box-shadow:
+    inset 0 0 0 2px rgba(122, 106, 85, 0.18),
+    0 0 0 14px rgba(189, 170, 134, 0.20),
+    0 12px 28px rgba(58, 47, 36, 0.12);
+  padding: 3.2rem 3.7rem !important;
+  position: relative;
+}
+
+/* Small ornamental top divider */
+.book .book-body .page-wrapper .page-inner section.normal::before {
+  content: "❦";
+  display: block;
+  color: var(--vintage-muted);
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  margin: -1.6rem auto 2rem auto;
+  padding: 0 1.8rem;
+  border-top: 1px solid rgba(122, 106, 85, 0.35);
+  border-bottom: 0;
+}
+
+/* Typography */
+
+.book .book-body .page-wrapper .page-inner section.normal,
+.book .book-body .page-wrapper .page-inner section.normal p,
+.book .book-body .page-wrapper .page-inner section.normal li,
+.book .book-body .page-wrapper .page-inner section.normal td,
+.book .book-body .page-wrapper .page-inner section.normal th,
+.book .book-body .page-wrapper .page-inner section.normal blockquote,
+.book .book-body .page-wrapper .page-inner section.normal figcaption,
+.book .book-body .page-wrapper .page-inner section.normal caption {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  color: var(--vintage-ink) !important;
+  font-size: 1.8rem;
+  line-height: 1.75;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+  margin: 0 0 1.1rem 0;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal em,
+.book .book-body .page-wrapper .page-inner section.normal i {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-style: italic;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal strong,
+.book .book-body .page-wrapper .page-inner section.normal b {
+  font-weight: 700;
+}
+
+/* H1 / title */
+h1,
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal .title {
+  font-family: "Sancreek", Georgia, serif !important;
+  color: var(--vintage-ink) !important;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  text-shadow: 2px 2px 0 rgba(139, 62, 47, 0.25);
+  border-bottom: 3px double var(--vintage-gold);
+  padding-bottom: 0.8rem;
+  margin: 2rem 0 2rem 0;
+}
+
+/* H2 */
+h2,
+.book .book-body .page-wrapper .page-inner section.normal h2 {
+  font-family: "Cinzel", Georgia, serif !important;
+  color: var(--vintage-rust) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 1.75rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin-top: 2.6rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--vintage-gold);
+}
+
+/* H3-H6 */
+h3,
+h4,
+h5,
+h6,
+.book .book-body .page-wrapper .page-inner section.normal h3,
+.book .book-body .page-wrapper .page-inner section.normal h4,
+.book .book-body .page-wrapper .page-inner section.normal h5,
+.book .book-body .page-wrapper .page-inner section.normal h6 {
+  font-family: "Cormorant SC", Georgia, serif !important;
+  color: var(--vintage-muted) !important;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h3 { font-size: 1.55rem; }
+.book .book-body .page-wrapper .page-inner section.normal h4 { font-size: 1.35rem; }
+.book .book-body .page-wrapper .page-inner section.normal h5 { font-size: 1.2rem; }
+.book .book-body .page-wrapper .page-inner section.normal h6 { font-size: 1.08rem; }
+
+/* Links */
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: var(--vintage-rust) !important;
+  border-bottom: 1px dotted var(--vintage-rust);
+  text-decoration: none !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+  color: var(--vintage-ink) !important;
+  border-bottom-style: solid;
+}
+
+/* Captions */
+
+p.caption,
+.book .book-body .page-wrapper .page-inner section.normal p.caption {
+  color: var(--vintage-muted) !important;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+/* Code blocks */
+
+p code,
+li code,
+td code,
+.book .book-body .page-wrapper .page-inner section.normal code {
+  white-space: inherit;
+  background: var(--vintage-code-bg) !important;
+  color: var(--vintage-ink) !important;
+  border: 1px solid rgba(189, 170, 134, 0.55);
+  border-radius: 3px;
+  padding: 0.12em 0.35em;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 0.88em;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+pre,
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  background: var(--vintage-code-bg) !important;
+  border: 1px solid var(--vintage-border);
+  border-left: 5px solid var(--vintage-rust);
+  box-shadow: inset 0 0 10px rgba(58, 47, 36, 0.05);
+  padding: 1rem 1.25rem !important;
+  margin: 1.4rem 0;
+}
+
+pre code,
+.book .book-body .page-wrapper .page-inner section.normal pre code {
+  white-space: inherit;
+  background: transparent !important;
+  border: 0;
+  padding: 0;
+  color: var(--vintage-ink) !important;
+}
+
+/* Tables */
+
+.book .book-body .page-wrapper .page-inner section.normal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--vintage-border);
+}
+
+.book .book-body .page-wrapper .page-inner section.normal th {
+  background: var(--vintage-rust) !important;
+  color: var(--vintage-paper) !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal th,
+.book .book-body .page-wrapper .page-inner section.normal td {
+  border: 1px solid var(--vintage-border);
+  padding: 0.55rem 0.7rem;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal tr:nth-child(even) td {
+  background: rgba(231, 220, 195, 0.42);
+}
+
+/* Blockquotes */
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  border-left: 4px double var(--vintage-rust);
+  background: rgba(231, 220, 195, 0.35);
+  margin: 1.6rem 0;
+  padding: 1rem 1.3rem;
+  font-style: italic;
+}
+
+/* Images and figures */
+
+.book .book-body .page-wrapper .page-inner section.normal img {
+  border: 1px solid var(--vintage-border);
+  box-shadow: 0 5px 14px rgba(58, 47, 36, 0.14);
+  padding: 4px;
+  background: var(--vintage-paper);
+}
+
+/* Sidebar / table of contents */
+
+.book-summary,
+.book-summary ul.summary,
+.book-summary ul.summary li,
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+  background-color: var(--vintage-paper-dark) !important;
+  color: var(--vintage-ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 1.70rem;
+}
+
+.book-summary {
+  border-right: 1px solid var(--vintage-gold) !important;
+  box-shadow: inset -8px 0 16px rgba(58, 47, 36, 0.05);
+}
+
+.book-summary ul.summary li.active > a,
+.book-summary ul.summary li a:hover {
+  color: var(--vintage-rust) !important;
+  background: rgba(189, 170, 134, 0.25) !important;
+  border-left: 4px solid var(--vintage-rust);
+  text-decoration: none;
+}
+
+.book-summary .book-search input,
+.book-summary .book-search input:focus {
+  background: var(--vintage-paper) !important;
+  color: var(--vintage-ink) !important;
+  border-bottom: 1px solid var(--vintage-gold) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+
+/* Top toolbar */
+
+.book-header {
+  background-color: var(--vintage-paper-dark) !important;
+  border-bottom: 1px solid var(--vintage-gold) !important;
+  color: var(--vintage-ink) !important;
+}
+
+.book-header h1,
+.book-header a,
+.book-header .btn {
+  color: var(--vintage-muted) !important;
+}
+
+.book-header .btn:hover {
+  color: var(--vintage-rust) !important;
+  background: rgba(189, 170, 134, 0.25) !important;
+}
+
+/* Navigation arrows */
+
+.navigation,
+.navigation:hover {
+  color: var(--vintage-muted) !important;
+}
+
+/* Horizontal rules and ornaments */
+
+.book .book-body .page-wrapper .page-inner section.normal hr {
+  border: 0;
+  border-top: 3px double var(--vintage-gold);
+  margin: 2rem auto;
+  width: 80%;
+}
+
+/* Print-friendly tweaks */
+
+@media print {
+  body,
+  .book,
+  .book-body,
+  .body-inner,
+  .page-wrapper,
+  .page-inner,
+  .book .book-body .page-wrapper .page-inner section.normal {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  .book-summary,
+  .book-header,
+  .navigation {
+    display: none !important;
+  }
+}
+
+/* Mobile adjustments */
+
+@media screen and (max-width: 768px) {
+  .book .book-body .page-wrapper .page-inner {
+    padding: 1rem !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal {
+    padding: 2rem 1.3rem !important;
+    box-shadow:
+      inset 0 0 0 1px rgba(122, 106, 85, 0.18),
+      0 0 0 7px rgba(189, 170, 134, 0.20);
+  }
+
+  h1,
+  .book .book-body .page-wrapper .page-inner section.normal h1,
+  .book .book-body .page-wrapper .page-inner section.normal .title {
+    font-size: 2.15rem;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal,
+  .book .book-body .page-wrapper .page-inner section.normal p,
+  .book .book-body .page-wrapper .page-inner section.normal li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Portfolio title in sidebar */
+
+.book-summary ul.summary li.portfolio-title {
+  text-align: center !important;
+  padding: 18px 10px !important;
+  list-style: none !important;
+}
+
+.book-summary ul.summary li.portfolio-title a {
+  display: block !important;
+  text-align: center !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: var(--vintage-ink) !important;
+  background: transparent !important;
+  border-left: none !important;
+}
+
+.book-summary ul.summary li.portfolio-title a:hover {
+  color: var(--vintage-rust) !important;
+  background: transparent !important;
+  border-left: none !important;
+}

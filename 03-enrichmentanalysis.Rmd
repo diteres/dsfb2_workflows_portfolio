@@ -1,0 +1,212 @@
+# Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R {-}
+
+## Introduction {-}
+
+During DSFB1 course, I have learned how to perform ORA Gene Enrichment analysis for an RNA-sequencing experiment and applied it on the provided dataset for the final assessment. 
+
+To further deepen my knowledge of RNA analysis, I want to learn how to perform another type of RNA-seq enrichment analysis: GSEA. 
+
+In this self-study assignment, I want to: 
+
+- Learn how enrichment methodology affect the biological interpretation of RNA-seq data and compare the previous ORA results with a new GSEA analysis using the same DESeq2 dataset. 
+
+- Obtain a more complete picture of the previously used data.
+
+## Background | Difference between GSEA and ORA {-}
+
+Difference between GSEA(Gene Set Enrichment Analysis) and ORA(Over-Representation Analysis): 
+ORA uses a threshold-filtered list of significant genes, while GSEA uses all genes ranked by expression change. ORA is ideal for quick, high-magnitude gene lists, whereas GSEA excels at identifying subtle, coordinated changes in entire pathways.
+
+https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data
+
+
+## Data description & Research question {-}
+The data is obtained from [this research](https://academic.oup.com/nar/article/47/11/5587/5485068?login=false). 
+
+```{r, warning=FALSE, echo=FALSE}
+library(knitr)
+library(tidyverse)
+
+metadata <- data.frame(
+  `GEO Sample id` = c("GSM3393013", "GSM3393014", "GSM3393015", "GSM3393016"),
+  `Cell line` = c("Fibroblast line 1 (CL1500023)",
+                  "Fibroblast line 1 (CL1500023)",
+                  "Fibroblast line 1 (CL1500023)",
+                  "Fibroblast line 1 (CL1500023)"),
+  Treatment = c("BCLXL", "BCLXL", "ONECUT1", "ONECUT1"),
+  `Run id` = c("SRR7866699", "SRR7866700", "SRR7866701", "SRR7866702")
+)
+
+kable(metadata, caption = "Sample metadata table") 
+```
+
+
+
+Research question: Do ORA and GSEA lead to the same biological interpretation of ONECUT1-induced fibroblast transdifferation? 
+
+Subquestions:
+- Are GO terms found by ORA and GSEA the same? 
+- Does neurogenesis/nervous system development still appear? 
+- Do apoptotic processes remain enriched? 
+- Do GSEA find subtler pathways that were missed by ORA? 
+- To what extend do conclusions depend on the padj <0.01 and LFC > 1? 
+- What is the difference in the results of GSEA GO term analysis and KEGG pathways analysis? 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+``` {r, libraries}
+library(png)
+library(grid)
+library(gridExtra)
+library(tidyverse)
+library(DESeq2)
+library(org.Hs.eg.db)
+library(pheatmap)
+library(GOstats)
+library(AnnotationDbi) 
+```
+
+```{r}
+count_table<-readRDS(file = "~/bookdown-demo/data/rna_seq/read_counts_OC1.rds")
+count_table_matrix<-count_table$counts
+
+metadata_OC1 <- read_csv("~/bookdown-demo/data/rna_seq/onecut_sampledata_OC1.csv")
+
+# Convert the metadata to data frame object
+metadata_OC1 <- as.data.frame(metadata_OC1)
+
+# Add rownames to the metadata data frame
+rownames(metadata_OC1) <- paste0(metadata_OC1$Run, ".bam")
+
+# Show first lines of metadata object
+# head(metadata_OC1)
+
+# Check if column names of count table are the same as row names of metadata object
+# colnames(count_table_matrix) == rownames(metadata_OC1)
+
+# verkort treatment naam i.v.m. heatmap en andere grafieken
+metadata_OC1 <- metadata_OC1 %>%
+  mutate(
+    treatment = str_replace_all(Cell_type, " ", "_"), # replace spaces with underscores
+    treatment = case_when(                               
+      treatment == "Skin_derived_fibroblast_overexpressing_Bclxl" ~ "Bclxl_control",
+      treatment == "2_days_after_induction_of_OC1_in_skin_derived_fibroblasts" ~ "OC1_treatment",
+      TRUE ~ treatment
+    )
+  )
+
+# factor maken
+metadata_OC1$treatment<- factor(
+  metadata_OC1$treatment,
+  levels = c("Bclxl_control","OC1_treatment")
+)
+
+# Create the DESeqDataSet object
+dds <- DESeqDataSetFromMatrix(
+  countData = count_table_matrix,
+  colData = metadata_OC1, 
+  design = ~ treatment
+)
+
+# Perform the DGE analysis using DESeq2
+Trans_diff_dge <- DESeq(dds)
+Trans_diff_dge_results <- results(Trans_diff_dge)
+
+```
+
+
+
+``` {r}
+trans_diff_dge_go <- results(Trans_diff_dge, alpha = 0.01, lfcThreshold = 1) 
+
+#upregulated genes 
+
+upregulated_genes <- trans_diff_dge_go %>% data.frame() %>% filter(log2FoldChange > 1, padj < 0.01) %>% rownames()
+
+#downregulated genes 
+downregulated_genes <- trans_diff_dge_go %>% data.frame() %>% filter(log2FoldChange < -1, padj < 0.01) %>% rownames()
+
+all_genes <- trans_diff_dge_go %>% data.frame() %>% rownames()
+
+# Perform GO term enrichment analysis for upregulated genes 
+test_object_upreg <- new("GOHyperGParams",
+                   geneIds = upregulated_genes,
+                   universeGeneIds = all_genes, 
+                   annotation = "org.Hs.eg.db", 
+                   ontology = "BP", 
+                   pvalueCutoff = 1,
+                   testDirection = "over")
+goterm_analysis_upreg <- hyperGTest(test_object_upreg)
+
+goterm_analysis_upreg_results <- summary(goterm_analysis_upreg)
+
+```
+
+``` {r}
+# Perform GO term enrichment analysis for downregulated genes
+test_object_downreg <- new("GOHyperGParams",
+                   geneIds = downregulated_genes,
+                   universeGeneIds = all_genes, 
+                   annotation = "org.Hs.eg.db", 
+                   ontology = "BP", 
+                   pvalueCutoff = 1,
+                   testDirection = "over")
+
+goterm_analysis_downreg <- hyperGTest(test_object_downreg)
+
+goterm_analysis_downreg_results <- summary(goterm_analysis_downreg)
+
+#Adjust p values for multiple testing 
+goterm_analysis_upreg_results$padj <- p.adjust(goterm_analysis_upreg_results$Pvalue, method = "BH")
+
+goterm_analysis_downreg_results$padj <- p.adjust(goterm_analysis_downreg_results$Pvalue, method = "BH")
+
+# Select only gene sets that are larger than 5 but smaller 
+# than 500 (to prevent taking along very small and very large
+# gene sets).
+goterm_analysis_upreg_results <- goterm_analysis_upreg_results %>% filter(Count > 5) %>% filter(Count < 500)
+
+goterm_analysis_downreg_results <- goterm_analysis_downreg_results %>% filter(Count > 5) %>% filter(Count < 500)
+
+#Select the top 20 GO terms 
+goterm_analysis_upreg_top20  <- goterm_analysis_upreg_results[order(goterm_analysis_upreg_results$padj)[1:20],]
+goterm_analysis_downreg_top20 <- goterm_analysis_downreg_results[order(goterm_analysis_downreg_results$padj)[1:20],]
+
+
+```
+
+``` {r}
+
+#order by padj, term is ordered using padj
+goterm_analysis_upreg_top20$Term <- factor(goterm_analysis_upreg_top20$Term, 
+                                     levels = goterm_analysis_upreg_top20$Term[
+                                       order(goterm_analysis_upreg_top20$padj, decreasing = TRUE)])
+
+#Plot the p-values of the top 20 GO terms (upregulated)
+p1 <- goterm_analysis_upreg_top20 %>% ggplot(aes(x = Term, y =-log10(padj))) +
+  geom_point() +
+  coord_flip() + 
+  ylab(expression(-log[10](adjusted~italic(P)~value))) +
+  xlab("GO terms") + 
+  ggtitle("Top 20 enriched GO terms for upregulated genes\n in ONECUT1 vs BCLXL")
+
+p1
+
+#order by padj, term is ordered using padj
+goterm_analysis_downreg_top20$Term <- factor(goterm_analysis_downreg_top20$Term, 
+                                     levels = goterm_analysis_downreg_top20$Term[
+                                       order(goterm_analysis_downreg_top20$padj, decreasing = TRUE)])
+
+#Plot the p-values of the top 20 GO terms (downregulated)
+p2 <- goterm_analysis_downreg_top20 %>% ggplot(aes(x = Term, y =-log10(padj))) +
+  geom_point() +
+  coord_flip() + 
+  ylab(expression(-log[10](adjusted~italic(P)~value))) +
+  xlab("GO terms") + 
+  ggtitle("Top 20 enriched GO terms for downregulated genes\n in ONECUT1 vs BCLXL")
+
+p2
+
+```

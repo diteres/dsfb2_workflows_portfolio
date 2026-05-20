@@ -1,0 +1,1 @@
+# Parameterized Rmarkdown report: The number of COVID-19 cases in Europe {-}
