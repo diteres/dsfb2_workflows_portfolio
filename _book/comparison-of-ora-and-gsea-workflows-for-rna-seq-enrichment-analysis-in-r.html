@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit</title>
+  <title>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | _main.knit</title>
   <meta name="description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit" />
+  <meta property="og:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | _main.knit" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | bookdown-demo.knit" />
+  <meta name="twitter:title" content="Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R | _main.knit" />
   
   <meta name="twitter:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
   
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="plan-for-the-future.html"/>
+<link rel="prev" href="professional-profile-career-vision.html"/>
 <link rel="next" href="data-management.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,13 +52,101 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
 </head>
 
 <body>
@@ -71,33 +159,87 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./"><strong>Diana Tereshchenko | Portfolio</strong></a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html"><i class="fa fa-check"></i>Curriculum vitae</a>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html"><i class="fa fa-check"></i>Professional Profile &amp; Career Vision</a>
 <ul>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#about"><i class="fa fa-check"></i>About</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#education"><i class="fa fa-check"></i>Education</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#contact"><i class="fa fa-check"></i>Contact</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#curriculum-vitae"><i class="fa fa-check"></i>Curriculum vitae</a>
+<ul>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#about"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#education"><i class="fa fa-check"></i>Education</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="plan-for-the-future.html"><a href="plan-for-the-future.html"><i class="fa fa-check"></i>Plan for the future</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#current-position-future-direction"><i class="fa fa-check"></i>Current Position &amp; Future Direction</a>
+<ul>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#current-position"><i class="fa fa-check"></i>Current position</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#short-term-perspective-13-years"><i class="fa fa-check"></i>Short-Term Perspective (1–3 Years)</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#long-term-perspective-310-years"><i class="fa fa-check"></i>Long-Term Perspective (3–10 Years)</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#areas-for-further-development"><i class="fa fa-check"></i>Areas for Further Development</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#contact"><i class="fa fa-check"></i>Contact</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><i class="fa fa-check"></i>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R</a>
 <ul>
 <li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#introduction-1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#background-difference-between-gsea-and-ora"><i class="fa fa-check"></i>Background | Difference between GSEA and ORA</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#planning"><i class="fa fa-check"></i>Planning</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#difference-between-gsea-gene-set-enrichment-analysis-and-ora-over-representation-analysis"><i class="fa fa-check"></i>Difference between GSEA (Gene Set Enrichment Analysis) and ORA (Over-Representation Analysis)</a></li>
 <li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#data-description-research-question"><i class="fa fa-check"></i>Data description &amp; Research question</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#libraries"><i class="fa fa-check"></i>Libraries</a>
+<ul>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#brief-rna-seq-preprocessing-summary"><i class="fa fa-check"></i>Brief RNA-seq preprocessing summary</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#differential-expression-analysis-deseq2"><i class="fa fa-check"></i>Differential expression analysis (DESeq2)</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-over-representation-analysis"><i class="fa fa-check"></i>ORA (Over-Representation Analysis)</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#gsea-gene-set-enrichment-analysis"><i class="fa fa-check"></i>GSEA (Gene Set Enrichment Analysis)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-and-gsea"><i class="fa fa-check"></i>ORA and GSEA</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i>Data management</a></li>
-<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible science</a></li>
-<li class="chapter" data-level="" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i>SQL</a></li>
-<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html"><i class="fa fa-check"></i>ggplot2: ravenplot</a></li>
-<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><i class="fa fa-check"></i>Parameterized Rmarkdown report: The number of COVID-19 cases in Europe</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible science</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#reproduction-of-data-analysis"><i class="fa fa-check"></i>Reproduction of data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#raw-data-visualization"><i class="fa fa-check"></i>Raw data visualization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#data-normalization"><i class="fa fa-check"></i>Data normalization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#normalized-data-visualization"><i class="fa fa-check"></i>Normalized data visualization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#controls-used-in-the-experiment"><i class="fa fa-check"></i>Controls Used in the Experiment</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#purpose-of-the-controls"><i class="fa fa-check"></i>Purpose of the Controls</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#why-do-we-normalize-data"><i class="fa fa-check"></i>Why do we normalize data?</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#follow-up-research"><i class="fa fa-check"></i>Follow-up research</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#assessment-of-article-reproducibility"><i class="fa fa-check"></i>Assessment of article reproducibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#introduction-2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#materials-and-methods-summary"><i class="fa fa-check"></i>Materials and methods summary</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#results-summary"><i class="fa fa-check"></i>Results summary</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#evaluation-based-on-criteria"><i class="fa fa-check"></i>Evaluation based on criteria</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#code-reproducibility"><i class="fa fa-check"></i>Code reproducibility</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#conclusion"><i class="fa fa-check"></i>Conclusion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html"><i class="fa fa-check"></i>ggplot2: ravenplot</a>
+<ul>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#scatter-plot"><i class="fa fa-check"></i>Scatter plot</a></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#bar-plot"><i class="fa fa-check"></i>Bar plot</a></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#heatmap"><i class="fa fa-check"></i>Heatmap</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><i class="fa fa-check"></i>Parameterized Rmarkdown report: The number of COVID-19 cases in Europe</a>
+<ul>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#code"><i class="fa fa-check"></i>Code</a>
+<ul>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#load-libraries"><i class="fa fa-check"></i>Load libraries</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#import-data-from-the-source"><i class="fa fa-check"></i>Import data from the source</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#select-input-country-year-months"><i class="fa fa-check"></i>Select input: Country, year, month(s)</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#data-filtering"><i class="fa fa-check"></i>Data filtering</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-cases-graph"><i class="fa fa-check"></i>Daily COVID-19 Cases Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-related-deaths-graph"><i class="fa fa-check"></i>Daily COVID-19-Related Deaths Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-cases-and-deaths-graph"><i class="fa fa-check"></i>Daily COVID-19 Cases and Deaths Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="project-leptospira.html"><a href="project-leptospira.html"><i class="fa fa-check"></i>Project Leptospira</a>
+<ul>
+<li class="chapter" data-level="" data-path="project-leptospira.html"><a href="project-leptospira.html#eight-facts-about-leptospira"><i class="fa fa-check"></i>Eight Facts About <em>Leptospira</em></a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="all-things-from-book-demo.html"><a href="all-things-from-book-demo.html"><i class="fa fa-check"></i>all things from book demo</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="_blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -119,35 +261,85 @@
 <h1>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="introduction-1" class="section level2 unnumbered hasAnchor">
 <h2>Introduction<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>During DSFB1 course, I have learned how to perform ORA Gene Enrichment analysis for an RNA-sequencing experiment and applied it on the provided dataset for the final assessment.</p>
-<p>To further deepen my knowledge of RNA analysis, I want to learn how to perform another type of RNA-seq enrichment analysis: GSEA.</p>
-<p>In this self-study assignment, I want to:</p>
+<p>During DSFB1 course, I have learned how to perform ORA Gene Enrichment analysis for an RNA-enrichment analysis and applied it on the provided dataset for the final assessment. To further deepen my knowledge of transcriptomics analysis, I want to learn how to perform another type of RNA-seq enrichment analysis, GSEA. In this self-study assignment, I want to:</p>
 <ul>
 <li><p>Learn how enrichment methodology affect the biological interpretation of RNA-seq data and compare the previous ORA results with a new GSEA analysis using the same DESeq2 dataset.</p></li>
 <li><p>Obtain a more complete picture of the previously used data.</p></li>
 </ul>
 </div>
-<div id="background-difference-between-gsea-and-ora" class="section level2 unnumbered hasAnchor">
-<h2>Background | Difference between GSEA and ORA<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#background-difference-between-gsea-and-ora" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Difference between GSEA and ORA:
-ORA uses a threshold-filtered list of significant genes, while GSEA uses all genes ranked by expression change. ORA is ideal for quick, high-magnitude gene lists, whereas GSEA excels at identifying subtle, coordinated changes in entire pathways.</p>
-<p><a href="https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data" class="uri">https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data</a></p>
+<div id="planning" class="section level2 unnumbered hasAnchor">
+<h2>Planning<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#planning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A total of 32 hours of study time was allocated for this part of the portfolio. The initial planning accounted for only 30 hours, while the remaining 2 hours were spent on scRNA-seq analysis using Seurat in the ‘Reproducible Science’ section of my portfolio.</p>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 1: </span>Project planning table</caption>
+<colgroup>
+<col width="4%" />
+<col width="90%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Step</th>
+<th align="left">Activity</th>
+<th align="center">Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="left">Get familiar with GSEA and review the relevant literature</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="left">Write a background section that compares Over-Representation Analysis and Gene Set Enrichment Analysis, formulate research objective</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="left">Follow the tutorial(s)</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="left">Tidy up the old code and rewrite the research introduction</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="left">Apply pipeline to the new data set</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="left">Debugging, troubleshooting</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="left">scRNA-seq analysis using Seurat</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">Total</td>
+<td align="left"></td>
+<td align="center">32</td>
+</tr>
+</tbody>
+</table>
+<p>I track my time to improve productivity. Attached is a <a href="TogglTrack_Report_Detailed_report.pdf">PDF report</a> generated with Toggl Track (the time-tracking application I use), showing the total amount of time I have spent on the DSFB2 course so far, including the time dedicated to the project. Although I did not separate the tracked time by individual tasks, I have spent a total of <strong>78 hours</strong> on DSFB2 course.</p>
+</div>
+<div id="difference-between-gsea-gene-set-enrichment-analysis-and-ora-over-representation-analysis" class="section level2 unnumbered hasAnchor">
+<h2>Difference between GSEA (Gene Set Enrichment Analysis) and ORA (Over-Representation Analysis)<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#difference-between-gsea-gene-set-enrichment-analysis-and-ora-over-representation-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>GSEA and ORA are two key pathway analysis approaches for next-gen sequencing data.</p>
+<p>ORA uses a threshold-filtered list of significant genes, while GSEA uses all genes ranked by expression change. ORA is ideal for quick, high-magnitude gene lists, whereas GSEA excels at identifying subtle, coordinated changes in entire pathways.</p>
+<p>Using these two approaches together is powerful because it offers a more complete and robust interpretation of transcriptomic data<span class="citation">(<a href="#ref-pluto_gsea_ora">Pluto Bio 2025</a>)</span>.</p>
 </div>
 <div id="data-description-research-question" class="section level2 unnumbered hasAnchor">
 <h2>Data description &amp; Research question<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#data-description-research-question" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The data is obtained from <a href="https://academic.oup.com/nar/article/47/11/5587/5485068?login=false">this research</a>.</p>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.2.1     ✔ readr     2.2.0
-## ✔ forcats   1.0.1     ✔ stringr   1.6.0
-## ✔ ggplot2   4.0.3     ✔ tibble    3.3.1
-## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
-## ✔ purrr     1.2.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<p>The data is obtained from <a href="https://academic.oup.com/nar/article/47/11/5587/5485068?login=false">this research</a>:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-2">Table 1: </span>Sample metadata table</caption>
+<caption><span id="tab:unnamed-chunk-3">Table 2: </span>Sample metadata table</caption>
 <thead>
 <tr class="header">
 <th align="left">GEO.Sample.id</th>
@@ -183,15 +375,279 @@ ORA uses a threshold-filtered list of significant genes, while GSEA uses all gen
 </tr>
 </tbody>
 </table>
-<p>Research question: Do ORA and GSEA lead to the same biological interpretation of ONECUT1-induced fibroblast transdifferation?</p>
-<p>Subquestions:
+<p>This study is based on research into fibroblasts derived from human skin and induced pluripotent stem cells (iPSCs) generated from them. Two cell lines were obtained from each of the two subjects. To generate iPSCs, the four transcription factors MYC, OCT3/4, SOX2, and KLF4 were overexpressed.</p>
+<p>For each condition, two RNA-seq datasets with paired-end reads were generated. A stranded RNA-seq protocol was used, enabling the identification of plus and minus strands.</p>
+<p>As I have already performed an ORA analysis (presented in the section below), the new research question and subquestions are based on a comparison of the results obtained from ORA and GSEA. The main research question is:</p>
+<ul>
+<li>Do ORA and GSEA lead to the same biological interpretation of ONECUT1-induced fibroblast transdifferation?</li>
+</ul>
+<p>The subquestions are as follows:
 - Are GO terms found by ORA and GSEA the same?
-- Does neurogenesis/nervous system development still appear?
-- Do apoptotic processes remain enriched?
-- Do GSEA find subtler pathways that were missed by ORA?
-- To what extend do conclusions depend on the padj &lt;0.01 and LFC &gt; 1?
-- What is the difference in the results of GSEA GO term analysis and KEGG pathways analysis?</p>
+- Do GSEA find subtler pathways that were missed by ORA?</p>
+</div>
+<div id="libraries" class="section level2 unnumbered hasAnchor">
+<h2>Libraries<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-1" tabindex="-1"></a><span class="co">#Load all needed libraries </span></span>
+<span id="cb1-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb1-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-5" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-6" tabindex="-1"></a><span class="fu">library</span>(DESeq2)</span>
+<span id="cb1-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-7" tabindex="-1"></a><span class="fu">library</span>(org.Hs.eg.db)</span>
+<span id="cb1-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-8" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
+<span id="cb1-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-9" tabindex="-1"></a><span class="fu">library</span>(GOstats)</span>
+<span id="cb1-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-10" tabindex="-1"></a><span class="fu">library</span>(AnnotationDbi) </span>
+<span id="cb1-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-11" tabindex="-1"></a><span class="fu">library</span>(clusterProfiler)</span>
+<span id="cb1-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-12" tabindex="-1"></a><span class="fu">library</span>(enrichplot)</span>
+<span id="cb1-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-13" tabindex="-1"></a><span class="fu">library</span>(pathview)</span>
+<span id="cb1-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-14" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb1-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb1-15" tabindex="-1"></a><span class="fu">library</span>(msigdbr)</span></code></pre></div>
+<div id="brief-rna-seq-preprocessing-summary" class="section level3 unnumbered hasAnchor">
+<h3>Brief RNA-seq preprocessing summary<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#brief-rna-seq-preprocessing-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Reads were alignwed to hg38 using Rsubread, counts were generated with featureCounts.</p>
+</div>
+<div id="differential-expression-analysis-deseq2" class="section level3 unnumbered hasAnchor">
+<h3>Differential expression analysis (DESeq2)<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#differential-expression-analysis-deseq2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Differential gene expression(DGE) analysis for RNA-seq identifies which genes are significantly up-or-downregulated between biological conditions. In this section, DGE was performed using DESeq2.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-1" tabindex="-1"></a><span class="co"># Import count table </span></span>
+<span id="cb2-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-2" tabindex="-1"></a>count_table<span class="ot">&lt;-</span><span class="fu">readRDS</span>(<span class="at">file =</span> <span class="st">&quot;data/read_counts_OC1.rds&quot;</span>)</span>
+<span id="cb2-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-3" tabindex="-1"></a>count_table_matrix<span class="ot">&lt;-</span>count_table<span class="sc">$</span>counts</span>
+<span id="cb2-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-5" tabindex="-1"></a><span class="co"># Import metadata </span></span>
+<span id="cb2-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-6" tabindex="-1"></a>metadata_OC1 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/onecut_sampledata_OC1.csv&quot;</span>)</span>
+<span id="cb2-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-8" tabindex="-1"></a><span class="co"># Convert the metadata to data frame object</span></span>
+<span id="cb2-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-9" tabindex="-1"></a>metadata_OC1 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(metadata_OC1)</span>
+<span id="cb2-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-11" tabindex="-1"></a><span class="co"># Add rownames to the metadata data frame</span></span>
+<span id="cb2-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-12" tabindex="-1"></a><span class="fu">rownames</span>(metadata_OC1) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(metadata_OC1<span class="sc">$</span>Run, <span class="st">&quot;.bam&quot;</span>)</span>
+<span id="cb2-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-14" tabindex="-1"></a><span class="co"># Show first lines of metadata object</span></span>
+<span id="cb2-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-15" tabindex="-1"></a><span class="co"># head(metadata_OC1)</span></span>
+<span id="cb2-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-16" tabindex="-1"></a><span class="co"># Check if column names of count table are the same as row names of metadata object</span></span>
+<span id="cb2-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-17" tabindex="-1"></a><span class="co"># colnames(count_table_matrix) == rownames(metadata_OC1)</span></span>
+<span id="cb2-18"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-18" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-19" tabindex="-1"></a><span class="co"># Make treatment name shorter for the easier generation of the graphs</span></span>
+<span id="cb2-20"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-20" tabindex="-1"></a>metadata_OC1 <span class="ot">&lt;-</span> metadata_OC1 <span class="sc">%&gt;%</span></span>
+<span id="cb2-21"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-21" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-22"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-22" tabindex="-1"></a>    <span class="at">treatment =</span> <span class="fu">str_replace_all</span>(Cell_type, <span class="st">&quot; &quot;</span>, <span class="st">&quot;_&quot;</span>), <span class="co"># replace spaces with underscores</span></span>
+<span id="cb2-23"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-23" tabindex="-1"></a>    <span class="at">treatment =</span> <span class="fu">case_when</span>(                               </span>
+<span id="cb2-24"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-24" tabindex="-1"></a>      treatment <span class="sc">==</span> <span class="st">&quot;Skin_derived_fibroblast_overexpressing_Bclxl&quot;</span> <span class="sc">~</span> <span class="st">&quot;Bclxl_control&quot;</span>,</span>
+<span id="cb2-25"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-25" tabindex="-1"></a>      treatment <span class="sc">==</span> <span class="st">&quot;2_days_after_induction_of_OC1_in_skin_derived_fibroblasts&quot;</span> <span class="sc">~</span> <span class="st">&quot;OC1_treatment&quot;</span>,</span>
+<span id="cb2-26"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-26" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> treatment</span>
+<span id="cb2-27"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-27" tabindex="-1"></a>    )</span>
+<span id="cb2-28"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-28" tabindex="-1"></a>  )</span>
+<span id="cb2-29"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-29" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-30" tabindex="-1"></a><span class="co"># Make factors</span></span>
+<span id="cb2-31"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-31" tabindex="-1"></a>metadata_OC1<span class="sc">$</span>treatment<span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb2-32"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-32" tabindex="-1"></a>  metadata_OC1<span class="sc">$</span>treatment,</span>
+<span id="cb2-33"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-33" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Bclxl_control&quot;</span>,<span class="st">&quot;OC1_treatment&quot;</span>)</span>
+<span id="cb2-34"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-34" tabindex="-1"></a>)</span>
+<span id="cb2-35"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-35" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-36" tabindex="-1"></a><span class="co"># Create the DESeqDataSet object</span></span>
+<span id="cb2-37"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-37" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeqDataSetFromMatrix</span>(</span>
+<span id="cb2-38"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-38" tabindex="-1"></a>  <span class="at">countData =</span> count_table_matrix,</span>
+<span id="cb2-39"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-39" tabindex="-1"></a>  <span class="at">colData =</span> metadata_OC1, </span>
+<span id="cb2-40"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-40" tabindex="-1"></a>  <span class="at">design =</span> <span class="sc">~</span> treatment</span>
+<span id="cb2-41"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-41" tabindex="-1"></a>)</span>
+<span id="cb2-42"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-42" tabindex="-1"></a><span class="co"># Perform the DGE analysis using DESeq2</span></span>
+<span id="cb2-43"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-43" tabindex="-1"></a>ipsc_dge <span class="ot">&lt;-</span> <span class="fu">DESeq</span>(dds)</span>
+<span id="cb2-44"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-44" tabindex="-1"></a><span class="co"># Obtain the results for the DGE analysis</span></span>
+<span id="cb2-45"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-45" tabindex="-1"></a>ipsc_dge_results <span class="ot">&lt;-</span> <span class="fu">results</span>(ipsc_dge)</span>
+<span id="cb2-46"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb2-46" tabindex="-1"></a>ipsc_dge_results_go <span class="ot">&lt;-</span> <span class="fu">results</span>(ipsc_dge, <span class="at">alpha =</span> <span class="fl">0.01</span>, <span class="at">lfcThreshold =</span> <span class="dv">1</span>)</span></code></pre></div>
+</div>
+<div id="ora-over-representation-analysis" class="section level3 unnumbered hasAnchor">
+<h3>ORA (Over-Representation Analysis)<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-over-representation-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this section, I will perform ORA.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-1" tabindex="-1"></a><span class="co"># Create a list of upregulated genes</span></span>
+<span id="cb3-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-2" tabindex="-1"></a>upregulated_genes <span class="ot">&lt;-</span> ipsc_dge_results_go <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-3" tabindex="-1"></a>  <span class="fu">filter</span>(log2FoldChange <span class="sc">&gt;</span> <span class="dv">1</span>, padj <span class="sc">&lt;</span> <span class="fl">0.01</span>) <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb3-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-5" tabindex="-1"></a><span class="co"># Create a list of downregulated genes</span></span>
+<span id="cb3-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-6" tabindex="-1"></a>downregulated_genes <span class="ot">&lt;-</span> ipsc_dge_results_go <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-7" tabindex="-1"></a>  <span class="fu">filter</span>(log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">1</span>, padj <span class="sc">&lt;</span> <span class="fl">0.01</span>) <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb3-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-9" tabindex="-1"></a><span class="co"># Create a list of all genes in the dataset</span></span>
+<span id="cb3-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-10" tabindex="-1"></a>all_genes <span class="ot">&lt;-</span> ipsc_dge_results_go <span class="sc">%&gt;%</span> <span class="fu">data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">rownames</span>()</span>
+<span id="cb3-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-12" tabindex="-1"></a><span class="co"># Perform GO term enrichment analysis for upregulated genes </span></span>
+<span id="cb3-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-13" tabindex="-1"></a>test_object_upreg <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">&quot;GOHyperGParams&quot;</span>,</span>
+<span id="cb3-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-14" tabindex="-1"></a>                   <span class="at">geneIds =</span> upregulated_genes,</span>
+<span id="cb3-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-15" tabindex="-1"></a>                   <span class="at">universeGeneIds =</span> all_genes, </span>
+<span id="cb3-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-16" tabindex="-1"></a>                   <span class="at">annotation =</span> <span class="st">&quot;org.Hs.eg.db&quot;</span>, </span>
+<span id="cb3-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-17" tabindex="-1"></a>                   <span class="at">ontology =</span> <span class="st">&quot;BP&quot;</span>, </span>
+<span id="cb3-18"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-18" tabindex="-1"></a>                   <span class="at">pvalueCutoff =</span> <span class="dv">1</span>,</span>
+<span id="cb3-19"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-19" tabindex="-1"></a>                   <span class="at">testDirection =</span> <span class="st">&quot;over&quot;</span>)</span>
+<span id="cb3-20"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-20" tabindex="-1"></a>goterm_analysis_upreg <span class="ot">&lt;-</span> <span class="fu">hyperGTest</span>(test_object_upreg)</span>
+<span id="cb3-21"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-21" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb3-22" tabindex="-1"></a>goterm_analysis_upreg</span></code></pre></div>
+<pre><code>## Gene to GO BP  test for over-representation 
+## 6995 GO BP ids tested (6994 have p &lt; 1)
+## Selected gene set size: 832 
+##     Gene universe size: 18434 
+##     Annotation package: org.Hs.eg</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-1" tabindex="-1"></a>goterm_analysis_upreg_results <span class="ot">&lt;-</span> <span class="fu">summary</span>(goterm_analysis_upreg)</span>
+<span id="cb5-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-4" tabindex="-1"></a><span class="co"># Perform GO term enrichment analysis for downregulated genes</span></span>
+<span id="cb5-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-5" tabindex="-1"></a>test_object_downreg <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">&quot;GOHyperGParams&quot;</span>,</span>
+<span id="cb5-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-6" tabindex="-1"></a>                   <span class="at">geneIds =</span> downregulated_genes,</span>
+<span id="cb5-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-7" tabindex="-1"></a>                   <span class="at">universeGeneIds =</span> all_genes, </span>
+<span id="cb5-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-8" tabindex="-1"></a>                   <span class="at">annotation =</span> <span class="st">&quot;org.Hs.eg.db&quot;</span>, </span>
+<span id="cb5-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-9" tabindex="-1"></a>                   <span class="at">ontology =</span> <span class="st">&quot;BP&quot;</span>, </span>
+<span id="cb5-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-10" tabindex="-1"></a>                   <span class="at">pvalueCutoff =</span> <span class="dv">1</span>,</span>
+<span id="cb5-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-11" tabindex="-1"></a>                   <span class="at">testDirection =</span> <span class="st">&quot;over&quot;</span>)</span>
+<span id="cb5-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-13" tabindex="-1"></a>goterm_analysis_downreg <span class="ot">&lt;-</span> <span class="fu">hyperGTest</span>(test_object_downreg)</span>
+<span id="cb5-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb5-15" tabindex="-1"></a>goterm_analysis_downreg</span></code></pre></div>
+<pre><code>## Gene to GO BP  test for over-representation 
+## 5379 GO BP ids tested (5378 have p &lt; 1)
+## Selected gene set size: 359 
+##     Gene universe size: 18434 
+##     Annotation package: org.Hs.eg</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-1" tabindex="-1"></a>goterm_analysis_downreg_results <span class="ot">&lt;-</span> <span class="fu">summary</span>(goterm_analysis_downreg)</span>
+<span id="cb7-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-4" tabindex="-1"></a><span class="co">#Adjust p values for multiple testing </span></span>
+<span id="cb7-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-5" tabindex="-1"></a>goterm_analysis_upreg_results<span class="sc">$</span>padj <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(goterm_analysis_upreg_results<span class="sc">$</span>Pvalue, <span class="at">method =</span> <span class="st">&quot;BH&quot;</span>)</span>
+<span id="cb7-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-7" tabindex="-1"></a>goterm_analysis_downreg_results<span class="sc">$</span>padj <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(goterm_analysis_downreg_results<span class="sc">$</span>Pvalue, <span class="at">method =</span> <span class="st">&quot;BH&quot;</span>)</span>
+<span id="cb7-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-9" tabindex="-1"></a><span class="co"># Select only gene sets that are larger than 5 but smaller </span></span>
+<span id="cb7-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-10" tabindex="-1"></a><span class="co"># than 500 (to prevent taking along very small and very large</span></span>
+<span id="cb7-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-11" tabindex="-1"></a><span class="co"># gene sets).</span></span>
+<span id="cb7-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-12" tabindex="-1"></a>goterm_analysis_upreg_results <span class="ot">&lt;-</span> goterm_analysis_upreg_results <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&lt;</span> <span class="dv">500</span>)</span>
+<span id="cb7-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-13" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-14" tabindex="-1"></a>goterm_analysis_downreg_results <span class="ot">&lt;-</span> goterm_analysis_downreg_results <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Count <span class="sc">&lt;</span> <span class="dv">500</span>)</span>
+<span id="cb7-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-16" tabindex="-1"></a><span class="co">#Select the top 20 GO terms </span></span>
+<span id="cb7-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-17" tabindex="-1"></a>goterm_analysis_upreg_top20  <span class="ot">&lt;-</span> goterm_analysis_upreg_results[<span class="fu">order</span>(goterm_analysis_upreg_results<span class="sc">$</span>padj)[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>],]</span>
+<span id="cb7-18"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb7-18" tabindex="-1"></a>goterm_analysis_downreg_top20 <span class="ot">&lt;-</span> goterm_analysis_downreg_results[<span class="fu">order</span>(goterm_analysis_downreg_results<span class="sc">$</span>padj)[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>],]</span></code></pre></div>
+<p>Here, I will plot the graphs.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-1" tabindex="-1"></a><span class="co">#Plot the p-values of the top 20 GO terms (upregulated)</span></span>
+<span id="cb8-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-2" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> goterm_analysis_upreg_top20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Term, <span class="at">y =</span><span class="sc">-</span><span class="fu">log10</span>(padj))) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb8-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-4" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb8-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjuisted <span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-6" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb8-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-7" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Top 20 enriched GO terms</span><span class="sc">\n</span><span class="st"> for upregulated genes (ORA)&quot;</span>)</span>
+<span id="cb8-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb8-9" tabindex="-1"></a>p1</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="1152" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-1" tabindex="-1"></a><span class="co">#Plot the p-values of the top 20 GO terms (downregulated)</span></span>
+<span id="cb9-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-2" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> goterm_analysis_downreg_top20 <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Term, <span class="at">y =</span><span class="sc">-</span><span class="fu">log10</span>(padj))) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-4" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> </span>
+<span id="cb9-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-5" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjuisted <span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-6" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb9-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-7" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Top 20 enriched GO terms</span><span class="sc">\n</span><span class="st"> for downregulated genes (ORA)&quot;</span>)</span>
+<span id="cb9-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb9-9" tabindex="-1"></a>p2</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-2.png" width="1152" /></p>
+<p>According to the ORA enrichment analysis, neuronal processes are strongly upregulated, including neural development, neurogenesis, and neuronal differentiation. In addition, signaling pathways related to cell–cell communication and synaptic function, apoptotic processes are also enriched among the upregulated genes. The GO term enrichment analysis of downregulated genes primarily indicates suppression of vascular processes, such as circulatory system development and blood vessel morphogenesis, together with reduced cell motility and proliferation.</p>
+</div>
+<div id="gsea-gene-set-enrichment-analysis" class="section level3 unnumbered hasAnchor">
+<h3>GSEA (Gene Set Enrichment Analysis)<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#gsea-gene-set-enrichment-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this section, I will perform GSEA.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-1" tabindex="-1"></a><span class="co"># Prepare DESeq2 results for GSEA</span></span>
+<span id="cb10-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-2" tabindex="-1"></a>dge_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ipsc_dge_results) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-3" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">&quot;ENTREZID&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-4" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(stat))</span>
+<span id="cb10-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-5" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-6" tabindex="-1"></a><span class="co"># Create ranked gene list</span></span>
+<span id="cb10-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-7" tabindex="-1"></a>gene_list <span class="ot">&lt;-</span> dge_df<span class="sc">$</span>stat</span>
+<span id="cb10-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-8" tabindex="-1"></a><span class="fu">names</span>(gene_list) <span class="ot">&lt;-</span> dge_df<span class="sc">$</span>ENTREZID</span>
+<span id="cb10-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-9" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-10" tabindex="-1"></a><span class="co"># Remove duplicated IDs and sort</span></span>
+<span id="cb10-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-11" tabindex="-1"></a>gene_list <span class="ot">&lt;-</span> gene_list[<span class="sc">!</span><span class="fu">duplicated</span>(<span class="fu">names</span>(gene_list))]</span>
+<span id="cb10-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-12" tabindex="-1"></a>gene_list <span class="ot">&lt;-</span> <span class="fu">sort</span>(gene_list, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-13" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-14" tabindex="-1"></a><span class="co"># Run GSEA</span></span>
+<span id="cb10-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-15" tabindex="-1"></a>gsea_go <span class="ot">&lt;-</span> <span class="fu">gseGO</span>(</span>
+<span id="cb10-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-16" tabindex="-1"></a>  <span class="at">geneList =</span> gene_list,</span>
+<span id="cb10-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-17" tabindex="-1"></a>  <span class="at">OrgDb =</span> org.Hs.eg.db,</span>
+<span id="cb10-18"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-18" tabindex="-1"></a>  <span class="at">keyType =</span> <span class="st">&quot;ENTREZID&quot;</span>,</span>
+<span id="cb10-19"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-19" tabindex="-1"></a>  <span class="at">ont =</span> <span class="st">&quot;BP&quot;</span>,</span>
+<span id="cb10-20"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-20" tabindex="-1"></a>  <span class="at">minGSSize =</span> <span class="dv">6</span>,</span>
+<span id="cb10-21"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-21" tabindex="-1"></a>  <span class="at">maxGSSize =</span> <span class="dv">500</span>,</span>
+<span id="cb10-22"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-22" tabindex="-1"></a>  <span class="at">pvalueCutoff =</span> <span class="dv">1</span>,</span>
+<span id="cb10-23"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-23" tabindex="-1"></a>  <span class="at">pAdjustMethod =</span> <span class="st">&quot;BH&quot;</span>,</span>
+<span id="cb10-24"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-24" tabindex="-1"></a>  <span class="at">eps =</span> <span class="dv">0</span>,</span>
+<span id="cb10-25"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-25" tabindex="-1"></a>  <span class="at">seed =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-26"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-26" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">&quot;fgsea&quot;</span></span>
+<span id="cb10-27"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb10-27" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## Warning in preparePathwaysAndStats(pathways, stats, minSize, maxSize, gseaParam, : There are ties in the preranked stats (19.69% of the list).
+## The order of those tied genes will be arbitrary, which may produce unexpected results.</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-1" tabindex="-1"></a><span class="co"># Results</span></span>
+<span id="cb12-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-2" tabindex="-1"></a>gsea_results <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gsea_go)</span>
+<span id="cb12-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-4" tabindex="-1"></a><span class="co"># Significant GSEA results</span></span>
+<span id="cb12-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-5" tabindex="-1"></a>gsea_results_sig <span class="ot">&lt;-</span> gsea_results <span class="sc">%&gt;%</span></span>
+<span id="cb12-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-6" tabindex="-1"></a>  <span class="fu">filter</span>(p.adjust <span class="sc">&lt;</span> <span class="fl">0.01</span>)</span>
+<span id="cb12-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-8" tabindex="-1"></a><span class="co"># Upregulated pathways: positive NES</span></span>
+<span id="cb12-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-9" tabindex="-1"></a>gsea_top_up <span class="ot">&lt;-</span> gsea_results_sig <span class="sc">%&gt;%</span></span>
+<span id="cb12-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-10" tabindex="-1"></a>  <span class="fu">filter</span>(NES <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-11" tabindex="-1"></a>  <span class="fu">arrange</span>(p.adjust) <span class="sc">%&gt;%</span></span>
+<span id="cb12-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-12" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) </span>
+<span id="cb12-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-13" tabindex="-1"></a><span class="co"># Downregulated pathways: negative NES</span></span>
+<span id="cb12-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-14" tabindex="-1"></a>gsea_top_down <span class="ot">&lt;-</span> gsea_results_sig <span class="sc">%&gt;%</span></span>
+<span id="cb12-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-15" tabindex="-1"></a>  <span class="fu">filter</span>(NES <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-16" tabindex="-1"></a>  <span class="fu">arrange</span>(p.adjust) <span class="sc">%&gt;%</span></span>
+<span id="cb12-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb12-17" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) </span></code></pre></div>
+<p>I attempted to perform GSEA using the same parameters as in the ORA analysis. In the section below, I will present the results.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-1" tabindex="-1"></a><span class="co"># Plot the p-values of the top 20 upregulated GO terms from GSEA</span></span>
+<span id="cb13-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-2" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> gsea_top_up <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Description,</span>
+<span id="cb13-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-4" tabindex="-1"></a>             <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(p.adjust))) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> setSize,</span>
+<span id="cb13-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-6" tabindex="-1"></a>                 <span class="at">color =</span> NES)) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-7" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb13-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-8" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="dv">6</span>)) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-9" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb13-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-10" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjusted<span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-11" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb13-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-12" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Top 20 enriched GO terms</span><span class="sc">\n</span><span class="st">for upregulated genes (GSEA)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-13" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb13-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-14" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb13-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-15" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb13-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-16" tabindex="-1"></a>  )</span>
+<span id="cb13-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-17" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb13-18" tabindex="-1"></a>p3</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="1152" /></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-1" tabindex="-1"></a><span class="co"># Plot the p-values of the top 20 downregulated GO terms from GSEA</span></span>
+<span id="cb14-2"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-2" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> gsea_top_down <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Description,</span>
+<span id="cb14-4"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-4" tabindex="-1"></a>             <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(p.adjust))) <span class="sc">+</span></span>
+<span id="cb14-5"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-5" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> setSize,</span>
+<span id="cb14-6"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-6" tabindex="-1"></a>                 <span class="at">color =</span> NES)) <span class="sc">+</span></span>
+<span id="cb14-7"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-7" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb14-8"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-8" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">1.5</span>, <span class="fl">8.5</span>)) <span class="sc">+</span></span>
+<span id="cb14-9"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-9" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb14-10"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-10" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="fu">expression</span>(<span class="sc">-</span>log[<span class="dv">10</span>](adjusted<span class="sc">~</span><span class="fu">italic</span>(P)<span class="sc">~</span>value))) <span class="sc">+</span></span>
+<span id="cb14-11"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-11" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;GO terms&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb14-12"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-12" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Top 20 enriched GO terms</span><span class="sc">\n</span><span class="st">for downregulated genes (GSEA)&quot;</span>) <span class="sc">+</span></span>
+<span id="cb14-13"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-13" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb14-14"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-14" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb14-15"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-15" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb14-16"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-16" tabindex="-1"></a>  )</span>
+<span id="cb14-17"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#cb14-17" tabindex="-1"></a>p4</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-2.png" width="1152" /></p>
+<p>The GSEA analysis revealed suppression of wound healing, heart morphogenesis, TGF-β/BMP signaling, and cell adhesion. In contrast, RNA processing, ribosome biogenesis, and mitochondrial organization were positively enriched.</p>
+</div>
+</div>
+<div id="ora-and-gsea" class="section level2 unnumbered hasAnchor">
+<h2>ORA and GSEA<a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-and-gsea" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The results of GSEA and ORA differed, although some overlapping patterns were observed, such as suppression of vascular processes and adhesion, as well as upregulation of apoptotic processes. In addition, GSEA revealed positive enrichment of RNA processing and mitochondrial organization pathways.</p>
+<p>Together, these findings support a shift in cellular identity, in which the cells transition toward a more neuronal phenotype accompanied by metabolic and transcriptional remodeling. Therefore, ONECUT1-induced fibroblast transdifferentiation likely occurred successfully. In addition, more subtle pathways, such as suppression of ossification, were also identified.</p>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-pluto_gsea_ora" class="csl-entry">
+Pluto Bio. 2025. <span>“GSEA Vs ORA: Two Key Pathway Analysis Approaches for Next-Gen Sequencing Data.”</span> <a href="https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data">https://pluto.bio/resources/Learning%20Series/gsea-vs-ora-two-key-pathway-analysis-approaches-for-next-gen-sequencing-data</a>.
 </div>
 </div>
             </section>
@@ -199,7 +655,7 @@ ORA uses a threshold-filtered list of significant genes, while GSEA uses all gen
           </div>
         </div>
       </div>
-<a href="plan-for-the-future.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="professional-profile-career-vision.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="data-management.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -216,15 +672,14 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
     "github": false,
-    "facebook": false,
-    "twitter": false,
+    "facebook": true,
+    "twitter": true,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
     "vk": false,
     "whatsapp": false,
-    "all": false,
-    "google": false
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
   },
   "fontsettings": {
     "theme": "white",
@@ -232,8 +687,8 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/diteres/dsfb2_workflows_portfolio/edit/master/03-enrichmentanalysis.Rmd",
-    "text": "Edit"
+    "link": null,
+    "text": null
   },
   "history": {
     "link": null,
@@ -243,7 +698,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "download": null,
   "search": {
     "engine": "fuse",
     "options": null

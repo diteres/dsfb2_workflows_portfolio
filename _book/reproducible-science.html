@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reproducible science | bookdown-demo.knit</title>
+  <title>Reproducible science | _main.knit</title>
   <meta name="description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Reproducible science | bookdown-demo.knit" />
+  <meta property="og:title" content="Reproducible science | _main.knit" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Reproducible science | bookdown-demo.knit" />
+  <meta name="twitter:title" content="Reproducible science | _main.knit" />
   
   <meta name="twitter:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
   
@@ -29,7 +29,7 @@
   
   
 <link rel="prev" href="data-management.html"/>
-<link rel="next" href="sql.html"/>
+<link rel="next" href="ggplot2-ravenplot.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,9 +53,8 @@
 
 
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +64,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -147,6 +146,7 @@ div.csl-indent {
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
 </head>
 
 <body>
@@ -159,28 +159,87 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./"><strong>Diana Tereshchenko | Portfolio</strong></a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html"><i class="fa fa-check"></i>Curriculum vitae</a>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html"><i class="fa fa-check"></i>Professional Profile &amp; Career Vision</a>
 <ul>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#about"><i class="fa fa-check"></i>About</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#education"><i class="fa fa-check"></i>Education</a></li>
-<li class="chapter" data-level="" data-path="CV.html"><a href="CV.html#contact"><i class="fa fa-check"></i>Contact</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#curriculum-vitae"><i class="fa fa-check"></i>Curriculum vitae</a>
+<ul>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#about"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#education"><i class="fa fa-check"></i>Education</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="plan-for-the-future.html"><a href="plan-for-the-future.html"><i class="fa fa-check"></i>Plan for the future</a></li>
-<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><i class="fa fa-check"></i>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#current-position-future-direction"><i class="fa fa-check"></i>Current Position &amp; Future Direction</a>
+<ul>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#current-position"><i class="fa fa-check"></i>Current position</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#short-term-perspective-13-years"><i class="fa fa-check"></i>Short-Term Perspective (1–3 Years)</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#long-term-perspective-310-years"><i class="fa fa-check"></i>Long-Term Perspective (3–10 Years)</a></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#areas-for-further-development"><i class="fa fa-check"></i>Areas for Further Development</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="professional-profile-career-vision.html"><a href="professional-profile-career-vision.html#contact"><i class="fa fa-check"></i>Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><i class="fa fa-check"></i>Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R</a>
+<ul>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#introduction-1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#planning"><i class="fa fa-check"></i>Planning</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#difference-between-gsea-gene-set-enrichment-analysis-and-ora-over-representation-analysis"><i class="fa fa-check"></i>Difference between GSEA (Gene Set Enrichment Analysis) and ORA (Over-Representation Analysis)</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#data-description-research-question"><i class="fa fa-check"></i>Data description &amp; Research question</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#libraries"><i class="fa fa-check"></i>Libraries</a>
+<ul>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#brief-rna-seq-preprocessing-summary"><i class="fa fa-check"></i>Brief RNA-seq preprocessing summary</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#differential-expression-analysis-deseq2"><i class="fa fa-check"></i>Differential expression analysis (DESeq2)</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-over-representation-analysis"><i class="fa fa-check"></i>ORA (Over-Representation Analysis)</a></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#gsea-gene-set-enrichment-analysis"><i class="fa fa-check"></i>GSEA (Gene Set Enrichment Analysis)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html"><a href="comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html#ora-and-gsea"><i class="fa fa-check"></i>ORA and GSEA</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="data-management.html"><a href="data-management.html"><i class="fa fa-check"></i>Data management</a></li>
-<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible science</a></li>
-<li class="chapter" data-level="" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i>SQL</a></li>
-<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html"><i class="fa fa-check"></i>ggplot2: ravenplot</a></li>
-<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><i class="fa fa-check"></i>Parameterized Rmarkdown report: The number of COVID-19 cases in Europe</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html"><i class="fa fa-check"></i>Reproducible science</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#reproduction-of-data-analysis"><i class="fa fa-check"></i>Reproduction of data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#raw-data-visualization"><i class="fa fa-check"></i>Raw data visualization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#data-normalization"><i class="fa fa-check"></i>Data normalization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#normalized-data-visualization"><i class="fa fa-check"></i>Normalized data visualization</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#controls-used-in-the-experiment"><i class="fa fa-check"></i>Controls Used in the Experiment</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#purpose-of-the-controls"><i class="fa fa-check"></i>Purpose of the Controls</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#why-do-we-normalize-data"><i class="fa fa-check"></i>Why do we normalize data?</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#follow-up-research"><i class="fa fa-check"></i>Follow-up research</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#assessment-of-article-reproducibility"><i class="fa fa-check"></i>Assessment of article reproducibility</a>
+<ul>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#introduction-2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#materials-and-methods-summary"><i class="fa fa-check"></i>Materials and methods summary</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#results-summary"><i class="fa fa-check"></i>Results summary</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#evaluation-based-on-criteria"><i class="fa fa-check"></i>Evaluation based on criteria</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#code-reproducibility"><i class="fa fa-check"></i>Code reproducibility</a></li>
+<li class="chapter" data-level="" data-path="reproducible-science.html"><a href="reproducible-science.html#conclusion"><i class="fa fa-check"></i>Conclusion</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html"><i class="fa fa-check"></i>ggplot2: ravenplot</a>
+<ul>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#scatter-plot"><i class="fa fa-check"></i>Scatter plot</a></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#bar-plot"><i class="fa fa-check"></i>Bar plot</a></li>
+<li class="chapter" data-level="" data-path="ggplot2-ravenplot.html"><a href="ggplot2-ravenplot.html#heatmap"><i class="fa fa-check"></i>Heatmap</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><i class="fa fa-check"></i>Parameterized Rmarkdown report: The number of COVID-19 cases in Europe</a>
+<ul>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#code"><i class="fa fa-check"></i>Code</a>
+<ul>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#load-libraries"><i class="fa fa-check"></i>Load libraries</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#import-data-from-the-source"><i class="fa fa-check"></i>Import data from the source</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#select-input-country-year-months"><i class="fa fa-check"></i>Select input: Country, year, month(s)</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#data-filtering"><i class="fa fa-check"></i>Data filtering</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-cases-graph"><i class="fa fa-check"></i>Daily COVID-19 Cases Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-related-deaths-graph"><i class="fa fa-check"></i>Daily COVID-19-Related Deaths Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#daily-covid-19-cases-and-deaths-graph"><i class="fa fa-check"></i>Daily COVID-19 Cases and Deaths Graph</a></li>
+<li class="chapter" data-level="" data-path="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"><a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="project-leptospira.html"><a href="project-leptospira.html"><i class="fa fa-check"></i>Project Leptospira</a>
+<ul>
+<li class="chapter" data-level="" data-path="project-leptospira.html"><a href="project-leptospira.html#eight-facts-about-leptospira"><i class="fa fa-check"></i>Eight Facts About <em>Leptospira</em></a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="all-things-from-book-demo.html"><a href="all-things-from-book-demo.html"><i class="fa fa-check"></i>all things from book demo</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="_blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -200,7 +259,611 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="reproducible-science" class="section level1 unnumbered hasAnchor">
 <h1>Reproducible science<a href="reproducible-science.html#reproducible-science" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The purpose of this assignment is to demonstrate my ability to:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Reproduce research</li>
+<li>Assess an article for reproducibility</li>
+</ol>
+<div id="reproduction-of-data-analysis" class="section level2 unnumbered hasAnchor">
+<h2>Reproduction of data analysis<a href="reproducible-science.html#reproduction-of-data-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The dataset <code>CE.LIQ.FLOW.062_Tidydata</code> originates from the HU research group Innovative Testing in Life Sciences &amp; Chemistry.</p>
+<p>The most important variables in the dataset are:</p>
+<ul>
+<li><p>RawData: the number of offspring counted</p></li>
+<li><p>compName: the name of the chemical</p></li>
+<li><p>compConcentration: the concentration of the chemical</p></li>
+<li><p>expType: indicates whether the condition is experimental or a control condition</p></li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="reproducible-science.html#cb15-1" tabindex="-1"></a><span class="co"># Libraries </span></span>
+<span id="cb15-2"><a href="reproducible-science.html#cb15-2" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb15-3"><a href="reproducible-science.html#cb15-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb15-4"><a href="reproducible-science.html#cb15-4" tabindex="-1"></a><span class="co"># Import the data</span></span>
+<span id="cb15-5"><a href="reproducible-science.html#cb15-5" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>)</span>
+<span id="cb15-6"><a href="reproducible-science.html#cb15-6" tabindex="-1"></a><span class="co"># Inspect data</span></span>
+<span id="cb15-7"><a href="reproducible-science.html#cb15-7" tabindex="-1"></a><span class="co"># class(data$RawData)</span></span>
+<span id="cb15-8"><a href="reproducible-science.html#cb15-8" tabindex="-1"></a><span class="co"># class(data$compName)</span></span>
+<span id="cb15-9"><a href="reproducible-science.html#cb15-9" tabindex="-1"></a><span class="co"># class(data$compConcentration)</span></span>
+<span id="cb15-10"><a href="reproducible-science.html#cb15-10" tabindex="-1"></a><span class="co"># class(data$expType)</span></span>
+<span id="cb15-11"><a href="reproducible-science.html#cb15-11" tabindex="-1"></a><span class="co"># compConcentration is a character variable, we need to convert it</span></span>
+<span id="cb15-12"><a href="reproducible-science.html#cb15-12" tabindex="-1"></a>data<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data<span class="sc">$</span>compConcentration)</span>
+<span id="cb15-13"><a href="reproducible-science.html#cb15-13" tabindex="-1"></a><span class="co"># class(data$compConcentration) # compConcentrtaion is a numeric varialbe now </span></span></code></pre></div>
+<div id="raw-data-visualization" class="section level3 unnumbered hasAnchor">
+<h3>Raw data visualization<a href="reproducible-science.html#raw-data-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="reproducible-science.html#cb16-1" tabindex="-1"></a><span class="co"># Scatter plot for different chemicals and concentrations </span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="reproducible-science.html#cb17-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration,</span>
+<span id="cb17-2"><a href="reproducible-science.html#cb17-2" tabindex="-1"></a>                    <span class="at">y =</span> RawData,</span>
+<span id="cb17-3"><a href="reproducible-science.html#cb17-3" tabindex="-1"></a>                    <span class="at">color =</span> compName,</span>
+<span id="cb17-4"><a href="reproducible-science.html#cb17-4" tabindex="-1"></a>                    <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="reproducible-science.html#cb17-5" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="reproducible-science.html#cb17-6" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb17-7"><a href="reproducible-science.html#cb17-7" tabindex="-1"></a> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Raw Reproduction Data&quot;</span>,</span>
+<span id="cb17-8"><a href="reproducible-science.html#cb17-8" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Concentration (log10)&quot;</span>,</span>
+<span id="cb17-9"><a href="reproducible-science.html#cb17-9" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Number of Offspring&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb17-10"><a href="reproducible-science.html#cb17-10" tabindex="-1"></a><span class="fu">theme</span>( <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb17-11"><a href="reproducible-science.html#cb17-11" tabindex="-1"></a>                               <span class="at">hjust =</span> <span class="dv">1</span>) )</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range (`geom_point()`).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="960" /></p>
+</div>
+<div id="data-normalization" class="section level3 unnumbered hasAnchor">
+<h3>Data normalization<a href="reproducible-science.html#data-normalization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="reproducible-science.html#cb20-1" tabindex="-1"></a>negative_mean <span class="ot">&lt;-</span> data<span class="sc">$</span>RawData[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>] <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="reproducible-science.html#cb20-2" tabindex="-1"></a>  <span class="fu">mean</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb20-3"><a href="reproducible-science.html#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="reproducible-science.html#cb20-4" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a href="reproducible-science.html#cb20-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">normalizedData =</span> RawData <span class="sc">/</span> negative_mean)</span></code></pre></div>
+</div>
+<div id="normalized-data-visualization" class="section level3 unnumbered hasAnchor">
+<h3>Normalized data visualization<a href="reproducible-science.html#normalized-data-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="reproducible-science.html#cb21-1" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> compConcentration,</span>
+<span id="cb21-2"><a href="reproducible-science.html#cb21-2" tabindex="-1"></a>                    <span class="at">y =</span> normalizedData,</span>
+<span id="cb21-3"><a href="reproducible-science.html#cb21-3" tabindex="-1"></a>                    <span class="at">color =</span> compName)) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="reproducible-science.html#cb21-4" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb21-5"><a href="reproducible-science.html#cb21-5" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb21-6"><a href="reproducible-science.html#cb21-6" tabindex="-1"></a> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Normalized Reproduction Data&quot;</span>,</span>
+<span id="cb21-7"><a href="reproducible-science.html#cb21-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Concentration (log10 scale)&quot;</span>,</span>
+<span id="cb21-8"><a href="reproducible-science.html#cb21-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Number of Offspring&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb21-9"><a href="reproducible-science.html#cb21-9" tabindex="-1"></a><span class="fu">theme</span>( <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb21-10"><a href="reproducible-science.html#cb21-10" tabindex="-1"></a>                               <span class="at">hjust =</span> <span class="dv">1</span>) )</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="controls-used-in-the-experiment" class="section level3 unnumbered hasAnchor">
+<h3>Controls Used in the Experiment<a href="reproducible-science.html#controls-used-in-the-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Negative control: C.elegans that weren’t exposed to any chemicals</p></li>
+<li><p>Vehicle control: Contains only the solvent (ethanol, concentration 0.5), verifies whether solvent itself has an effect on C.elegans
+Positive control: Contains substance with verified toxic effect on C.elegans(ethanol, concentration 1.5)</p></li>
+</ul>
+</div>
+<div id="purpose-of-the-controls" class="section level3 unnumbered hasAnchor">
+<h3>Purpose of the Controls<a href="reproducible-science.html#purpose-of-the-controls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Vehicle control verifies whether solvent itself has an effect on C.elegans. It’s used for data normalization to separate the active agent’s effects from those of the solvent.</li>
+<li>Negative control establishes a baseline, represents normal biological condition. It ensures that no change is observed when a change is not expected.</li>
+<li>Positive control is used to show what a positive result looks like. It also ensures that testing procedure is capable of producing results when the expected outcome is present.</li>
+</ul>
+</div>
+<div id="why-do-we-normalize-data" class="section level3 unnumbered hasAnchor">
+<h3>Why do we normalize data?<a href="reproducible-science.html#why-do-we-normalize-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We normalize the data to subtract background noise (e.g., the effect of the solvent on the organism) and ensure that the remaining variation represents a true biological or experimental response.</p>
+</div>
+<div id="follow-up-research" class="section level3 unnumbered hasAnchor">
+<h3>Follow-up research<a href="reproducible-science.html#follow-up-research" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the follow-up research, the creation of dose-response curve is recommended.</p>
+<div id="step-by-step-workflow-in-r" class="section level4 unnumbered hasAnchor">
+<h4>Step-by-step workflow in R:<a href="reproducible-science.html#step-by-step-workflow-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Step 1. Install and load the <code>drc</code> package
+Step 2. Select data from one chemical
+Step 3. Remove concentration = 0 (log-logistic models cannot use zero doses)
+Step 4. Fit a log-logistic model: one of the most used dose-response models.
+Step 5. Inspect the model
+Step 6. Plot the dose-response curve
+Step 7. Calculate the IC50 value</p>
+</div>
+<div id="example-for-decane" class="section level4 hasAnchor" number="0.0.0.1">
+<h4><span class="header-section-number">0.0.0.1</span> Example for decane<a href="reproducible-science.html#example-for-decane" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="reproducible-science.html#cb22-1" tabindex="-1"></a><span class="fu">library</span>(drc) <span class="co">#step 1</span></span>
+<span id="cb22-2"><a href="reproducible-science.html#cb22-2" tabindex="-1"></a>data_decane <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(compName <span class="sc">==</span> <span class="st">&quot;decane&quot;</span>) <span class="co">#step 2</span></span>
+<span id="cb22-3"><a href="reproducible-science.html#cb22-3" tabindex="-1"></a>data_decane <span class="sc">%&gt;%</span> <span class="fu">filter</span> (compConcentration <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="co">#step 3</span></span></code></pre></div>
+<pre><code>## # A tibble: 90 × 35
+##    plateRow plateColumn vialNr dropCode expType    expReplicate expName      expDate             expResearcher expTime expUnit expVolumeCounted RawData compCASRN compName compConcentration compUnit
+##    &lt;lgl&gt;    &lt;lgl&gt;        &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;        &lt;dttm&gt;              &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;   
+##  1 NA       NA               1 a        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      18 124-18-5  decane                4.99 nM      
+##  2 NA       NA               1 b        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      29 124-18-5  decane                4.99 nM      
+##  3 NA       NA               1 c        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      17 124-18-5  decane                4.99 nM      
+##  4 NA       NA               1 d        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      19 124-18-5  decane                4.99 nM      
+##  5 NA       NA               1 e        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      19 124-18-5  decane                4.99 nM      
+##  6 NA       NA               2 a        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      16 124-18-5  decane                4.99 nM      
+##  7 NA       NA               2 b        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      18 124-18-5  decane                4.99 nM      
+##  8 NA       NA               2 c        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      20 124-18-5  decane                4.99 nM      
+##  9 NA       NA               2 d        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      22 124-18-5  decane                4.99 nM      
+## 10 NA       NA               2 e        experiment            3 CE.LIQ.FLOW… 2020-11-30 00:00:00 Sergio Reijn…      68 hour                  50      28 124-18-5  decane                4.99 nM      
+## # ℹ 80 more rows
+## # ℹ 18 more variables: compDelivery &lt;chr&gt;, compVehicle &lt;chr&gt;, elegansStrain &lt;chr&gt;, elegansInput &lt;dbl&gt;, bacterialStrain &lt;chr&gt;, bacterialTreatment &lt;chr&gt;, bacterialOD600 &lt;dbl&gt;, bacterialConcX &lt;dbl&gt;,
+## #   bacterialVolume &lt;dbl&gt;, bacterialVolUnit &lt;chr&gt;, incubationVial &lt;chr&gt;, incubationVolume &lt;dbl&gt;, incubationUnit &lt;chr&gt;, incubationMethod &lt;chr&gt;, incubationRPM &lt;dbl&gt;, bubble &lt;lgl&gt;,
+## #   incubateTemperature &lt;dbl&gt;, normalizedData &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="reproducible-science.html#cb24-1" tabindex="-1"></a>decane_model <span class="ot">&lt;-</span> <span class="fu">drm</span> (</span>
+<span id="cb24-2"><a href="reproducible-science.html#cb24-2" tabindex="-1"></a>  normalizedData <span class="sc">~</span> compConcentration,</span>
+<span id="cb24-3"><a href="reproducible-science.html#cb24-3" tabindex="-1"></a>  <span class="at">data =</span> data_decane,</span>
+<span id="cb24-4"><a href="reproducible-science.html#cb24-4" tabindex="-1"></a>  <span class="at">fct =</span> <span class="fu">LL.4</span>()</span>
+<span id="cb24-5"><a href="reproducible-science.html#cb24-5" tabindex="-1"></a>) <span class="co">#step 4</span></span>
+<span id="cb24-6"><a href="reproducible-science.html#cb24-6" tabindex="-1"></a><span class="fu">summary</span>(decane_model) <span class="co">#step 5</span></span></code></pre></div>
+<pre><code>## 
+## Model fitted: Log-logistic (ED50 as parameter) (4 parms)
+## 
+## Parameter estimates:
+## 
+##               Estimate Std. Error t-value   p-value    
+## b:(Intercept) 2.641583   1.017888  2.5952  0.011115 *  
+## c:(Intercept) 0.238285   0.030066  7.9254 7.486e-12 ***
+## d:(Intercept) 1.066149   0.017305 61.6093 &lt; 2.2e-16 ***
+## e:(Intercept) 0.119453   0.042934  2.7822  0.006634 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error:
+## 
+##  0.1158965 (86 degrees of freedom)</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="reproducible-science.html#cb26-1" tabindex="-1"></a><span class="fu">plot</span>(decane_model, <span class="at">log =</span> <span class="st">&quot;x&quot;</span>, <span class="at">type =</span> <span class="st">&quot;all&quot;</span>, <span class="at">normal =</span> <span class="st">&quot;true&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Component Concentration&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Normalized Number of Offspring&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.3</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.3</span>), <span class="at">main =</span> <span class="st">&quot;Dose-response curve Decane&quot;</span>) <span class="co"># step 6</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="reproducible-science.html#cb27-1" tabindex="-1"></a>IC50_decane <span class="ot">&lt;-</span> <span class="fu">ED</span> (decane_model, <span class="dv">50</span>) <span class="co"># step 7</span></span></code></pre></div>
+<pre><code>## 
+## Estimated effective doses
+## 
+##        Estimate Std. Error
+## e:1:50 0.119453   0.042934</code></pre>
+<p>To create one graph for all dose-response curves, skip Step 1 and use:
+<code>compName_model &lt;- drm (   normalizedData ~ compConcentration,   data = data_model, #data_model is filtered data with compConcentration &gt; 0   curveid = compName   fct = LL.4() )</code></p>
+<p>To make all graphs, <a href="https://www.rdocumentation.org/packages/drc/versions/3.0-1/topics/plot.drc">drs plot documentation</a> was used.</p>
+</div>
+</div>
+</div>
+<div id="assessment-of-article-reproducibility" class="section level2 unnumbered hasAnchor">
+<h2>Assessment of article reproducibility<a href="reproducible-science.html#assessment-of-article-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this part of my portfolio, I will evaluate <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0347679#sec02">this</a> paper published on the <a href="https://journals.plos.org/plosone/">PLOS One</a> website according to <a href="https://www.researchgate.net/publication/340244621_Reproducibility_and_reporting_practices_in_COVID-19_preprint_manuscripts">these criteria</a>:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="reproducible-science.html#cb29-1" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb29-2"><a href="reproducible-science.html#cb29-2" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="reproducible-science.html#cb29-3" tabindex="-1"></a>transparency_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb29-4"><a href="reproducible-science.html#cb29-4" tabindex="-1"></a>  <span class="st">`</span><span class="at">Transparency Criteria</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb29-5"><a href="reproducible-science.html#cb29-5" tabindex="-1"></a>    <span class="st">&quot;Study Purpose&quot;</span>,</span>
+<span id="cb29-6"><a href="reproducible-science.html#cb29-6" tabindex="-1"></a>    <span class="st">&quot;Data Availability Statement&quot;</span>,</span>
+<span id="cb29-7"><a href="reproducible-science.html#cb29-7" tabindex="-1"></a>    <span class="st">&quot;Data Location&quot;</span>,</span>
+<span id="cb29-8"><a href="reproducible-science.html#cb29-8" tabindex="-1"></a>    <span class="st">&quot;Study Location&quot;</span>,</span>
+<span id="cb29-9"><a href="reproducible-science.html#cb29-9" tabindex="-1"></a>    <span class="st">&quot;Author Review&quot;</span>,</span>
+<span id="cb29-10"><a href="reproducible-science.html#cb29-10" tabindex="-1"></a>    <span class="st">&quot;Ethics Statement&quot;</span>,</span>
+<span id="cb29-11"><a href="reproducible-science.html#cb29-11" tabindex="-1"></a>    <span class="st">&quot;Funding Statement&quot;</span>,</span>
+<span id="cb29-12"><a href="reproducible-science.html#cb29-12" tabindex="-1"></a>    <span class="st">&quot;Code Availability&quot;</span></span>
+<span id="cb29-13"><a href="reproducible-science.html#cb29-13" tabindex="-1"></a>  ),</span>
+<span id="cb29-14"><a href="reproducible-science.html#cb29-14" tabindex="-1"></a>  </span>
+<span id="cb29-15"><a href="reproducible-science.html#cb29-15" tabindex="-1"></a>  <span class="at">Definition =</span> <span class="fu">c</span>(</span>
+<span id="cb29-16"><a href="reproducible-science.html#cb29-16" tabindex="-1"></a>    <span class="st">&quot;A concise statement in the introduction of the article, often in the last paragraph, that establishes the reason the research was conducted. Also called the study objective.&quot;</span>,</span>
+<span id="cb29-17"><a href="reproducible-science.html#cb29-17" tabindex="-1"></a>    </span>
+<span id="cb29-18"><a href="reproducible-science.html#cb29-18" tabindex="-1"></a>    <span class="st">&quot;A statement, in an individual section offset from the main body of text, that explains how or if one can access a study’s data. The title of the section may vary, but it must explicitly mention data; it is therefore distinct from a supplementary materials section.&quot;</span>,</span>
+<span id="cb29-19"><a href="reproducible-science.html#cb29-19" tabindex="-1"></a>    </span>
+<span id="cb29-20"><a href="reproducible-science.html#cb29-20" tabindex="-1"></a>    <span class="st">&quot;Where the article’s data can be accessed, either raw or processed.&quot;</span>,</span>
+<span id="cb29-21"><a href="reproducible-science.html#cb29-21" tabindex="-1"></a>    </span>
+<span id="cb29-22"><a href="reproducible-science.html#cb29-22" tabindex="-1"></a>    <span class="st">&quot;Author has stated in the methods section where the study took place or the data’s country/region of origin.&quot;</span>,</span>
+<span id="cb29-23"><a href="reproducible-science.html#cb29-23" tabindex="-1"></a>    </span>
+<span id="cb29-24"><a href="reproducible-science.html#cb29-24" tabindex="-1"></a>    <span class="st">&quot;The professionalism of the contact information that the author has provided in the manuscript.&quot;</span>,</span>
+<span id="cb29-25"><a href="reproducible-science.html#cb29-25" tabindex="-1"></a>    </span>
+<span id="cb29-26"><a href="reproducible-science.html#cb29-26" tabindex="-1"></a>    <span class="st">&quot;A statement within the manuscript indicating any ethical concerns, including the presence of sensitive data.&quot;</span>,</span>
+<span id="cb29-27"><a href="reproducible-science.html#cb29-27" tabindex="-1"></a>    </span>
+<span id="cb29-28"><a href="reproducible-science.html#cb29-28" tabindex="-1"></a>    <span class="st">&quot;A statement within the manuscript indicating whether or not the authors received funding for their research.&quot;</span>,</span>
+<span id="cb29-29"><a href="reproducible-science.html#cb29-29" tabindex="-1"></a>    </span>
+<span id="cb29-30"><a href="reproducible-science.html#cb29-30" tabindex="-1"></a>    <span class="st">&quot;Authors have shared access to the most updated code that they used in their study, including code used for data analysis.&quot;</span></span>
+<span id="cb29-31"><a href="reproducible-science.html#cb29-31" tabindex="-1"></a>  ),</span>
+<span id="cb29-32"><a href="reproducible-science.html#cb29-32" tabindex="-1"></a>  </span>
+<span id="cb29-33"><a href="reproducible-science.html#cb29-33" tabindex="-1"></a>  <span class="st">`</span><span class="at">Response type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb29-34"><a href="reproducible-science.html#cb29-34" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No)&quot;</span>,</span>
+<span id="cb29-35"><a href="reproducible-science.html#cb29-35" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No)&quot;</span>,</span>
+<span id="cb29-36"><a href="reproducible-science.html#cb29-36" tabindex="-1"></a>    <span class="st">&quot;Found Value&quot;</span>,</span>
+<span id="cb29-37"><a href="reproducible-science.html#cb29-37" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No); Found Value&quot;</span>,</span>
+<span id="cb29-38"><a href="reproducible-science.html#cb29-38" tabindex="-1"></a>    <span class="st">&quot;Found Value&quot;</span>,</span>
+<span id="cb29-39"><a href="reproducible-science.html#cb29-39" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No)&quot;</span>,</span>
+<span id="cb29-40"><a href="reproducible-science.html#cb29-40" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No)&quot;</span>,</span>
+<span id="cb29-41"><a href="reproducible-science.html#cb29-41" tabindex="-1"></a>    <span class="st">&quot;Binary (Yes or No)&quot;</span></span>
+<span id="cb29-42"><a href="reproducible-science.html#cb29-42" tabindex="-1"></a>  ),</span>
+<span id="cb29-43"><a href="reproducible-science.html#cb29-43" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb29-44"><a href="reproducible-science.html#cb29-44" tabindex="-1"></a>)</span>
+<span id="cb29-45"><a href="reproducible-science.html#cb29-45" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb29-46"><a href="reproducible-science.html#cb29-46" tabindex="-1"></a>  transparency_table,</span>
+<span id="cb29-47"><a href="reproducible-science.html#cb29-47" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">&quot;markdown&quot;</span>,</span>
+<span id="cb29-48"><a href="reproducible-science.html#cb29-48" tabindex="-1"></a>  <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>, <span class="st">&quot;l&quot;</span>),</span>
+<span id="cb29-49"><a href="reproducible-science.html#cb29-49" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Transparency Criteria Table&quot;</span></span>
+<span id="cb29-50"><a href="reproducible-science.html#cb29-50" tabindex="-1"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-17">Table 3: </span>Transparency Criteria Table</caption>
+<colgroup>
+<col width="8%" />
+<col width="81%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Transparency.Criteria</th>
+<th align="left">Definition</th>
+<th align="left">Response.type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Study Purpose</td>
+<td align="left">A concise statement in the introduction of the article, often in the last paragraph, that establishes the reason the research was conducted. Also called the study objective.</td>
+<td align="left">Binary (Yes or No)</td>
+</tr>
+<tr class="even">
+<td align="left">Data Availability Statement</td>
+<td align="left">A statement, in an individual section offset from the main body of text, that explains how or if one can access a study’s data. The title of the section may vary, but it must explicitly mention data; it is therefore distinct from a supplementary materials section.</td>
+<td align="left">Binary (Yes or No)</td>
+</tr>
+<tr class="odd">
+<td align="left">Data Location</td>
+<td align="left">Where the article’s data can be accessed, either raw or processed.</td>
+<td align="left">Found Value</td>
+</tr>
+<tr class="even">
+<td align="left">Study Location</td>
+<td align="left">Author has stated in the methods section where the study took place or the data’s country/region of origin.</td>
+<td align="left">Binary (Yes or No); Found Value</td>
+</tr>
+<tr class="odd">
+<td align="left">Author Review</td>
+<td align="left">The professionalism of the contact information that the author has provided in the manuscript.</td>
+<td align="left">Found Value</td>
+</tr>
+<tr class="even">
+<td align="left">Ethics Statement</td>
+<td align="left">A statement within the manuscript indicating any ethical concerns, including the presence of sensitive data.</td>
+<td align="left">Binary (Yes or No)</td>
+</tr>
+<tr class="odd">
+<td align="left">Funding Statement</td>
+<td align="left">A statement within the manuscript indicating whether or not the authors received funding for their research.</td>
+<td align="left">Binary (Yes or No)</td>
+</tr>
+<tr class="even">
+<td align="left">Code Availability</td>
+<td align="left">Authors have shared access to the most updated code that they used in their study, including code used for data analysis.</td>
+<td align="left">Binary (Yes or No)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PLOS One</strong> is a peer-reviewed open-access journal that supports the open-science movement and mandates the sharing of materials and software to ensure reproducibility. In addition, I will replicate a few graphs from the study to assess whether they are easy or difficult to reproduce.</p>
+<div id="introduction-2" class="section level3 unnumbered hasAnchor">
+<h3>Introduction<a href="reproducible-science.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Title</strong>: <em>Single-cell atlas of gastric cancer reveals malignant epithelial evolution and regulatory reprogramming of the tumor microenvironment</em> <span class="citation">(<a href="#ref-li2026gastric">Li et al. 2026</a>)</span></p>
+<p><strong>Reference</strong> : <em>Xiulan Li, Mengqi Guo, Yunhan Wen, Bo Long</em></p>
+<p><em>Affiliations</em>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Department of Gastroenterology, Hunan Provincial People’s Hospital, The First Affiliated Hospital of Hunan Normal University, Changsha, Hunan, China.</p></li>
+<li><p>Research Institute of Lanzhou University in Shenzhen, Lanzhou University, Shenzhen, Guangdong, China.</p></li>
+<li><p>Department Three of General Surgery, The Second Hospital &amp; Clinical Medical School, Lanzhou University, Lanzhou, Gansu, China.</p></li>
+</ol>
+<p><strong>PMID</strong>: <em>42018572</em></p>
+<p><strong>PMCID</strong>: <em>PMC13102225</em></p>
+<p><strong>DOI</strong>: <em>10.1371/journal.pone.0347679</em></p>
+<p><strong>Data availability</strong>: <em><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0347679#sec02*\" class="uri">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0347679#sec02*\</a></em></p>
+<p><strong>Research objective</strong>: The research objective of this study is to determine:</p>
+<ol style="list-style-type: decimal">
+<li><p>whether malignant epithelium arises from specific progenitor branches and the molecular timing and ecological conditions of such bifurcation;</p></li>
+<li><p>whether epithelial–CAF/TAM interaction modules constitute key drivers of proliferation, immune evasion, and matrix remodeling;</p></li>
+<li><p>which transcription-factor programs govern malignant transformation and could serve as early warning markers and therapeutic targets</p></li>
+</ol>
+</div>
+<div id="materials-and-methods-summary" class="section level3 unnumbered hasAnchor">
+<h3>Materials and methods summary<a href="reproducible-science.html#materials-and-methods-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This study uses publicly available scRNA-seq data from the GEO database, GSE150290. Data set includes 51 samples with different pathological stages, which represent progression along the Correa cascade:</p>
+<ul>
+<li><p>Chronic Gastritis Superficialis(CGS) (n=3):early inflammation of the stomach lining, no precancrerous changes</p></li>
+<li><p>Intestinal Metaplasia(IM) (n=2): precancerous stage, stomach cells change into intestine like cells</p></li>
+<li><p>Gastric Cancer(GC) (n=23): malignant tumor tissue</p></li>
+<li><p>Adjacent tumor stroma cells for the comparison (n=23)</p></li>
+</ul>
+<p>The data underwent quality control that included filtering of low-quality cells based on gene count, RNA count (∈ [500, 50,000]), mitochondrial(≥15) and hemoglobin content(≥15%).
+At gene level, they kept features expressed in ≥4 cells to reduce noise. For the downstream processing they:</p>
+<ul>
+<li><p>log-normalized (scale factor 10,000) data</p></li>
+<li><p>selected highly variable genes using the “vst” (variance stabilizing transformation) method (top 3,000 genes) to fairly identify genes that are truly biologically variable and not just higly expressed</p></li>
+<li><p>scaled the data linearly</p></li>
+<li><p>ran principal component analysis (PCA)</p></li>
+<li><p>performed clustering using the first 10 principal components(PCs) with resolution of 0.1</p></li>
+<li><p>used UMAP for visualization to show the atlas of GC cells</p></li>
+<li><p>used epithelial (EPCAM, KRT8), endothelial (VWF, PECAM1), stromal (COL1A1, PTGDS), and immune (PTPRC, CD68, IL1B, CD79A, CD3D, CD3E; mast cell CPA3, TPSAB1) markers for cell-type annotation</p></li>
+</ul>
+<p>This study also identifies malignant epithelial cells using inferCNV, performs cell–cell communication analysis using CellChat, reconstructs pseudotime trajectories to determine the developmental progression of malignant epithelial cells using Monocle2, applies the SCENIC workflow to construct and evaluate transcription factor (TF) regulatory networks, and performs external validation of TFs.</p>
+</div>
+<div id="results-summary" class="section level3 unnumbered hasAnchor">
+<h3>Results summary<a href="reproducible-science.html#results-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After stringent QC and data integration, a total of 215,038 cells were retained for clustering. Cells resolved into seven major lineages:</p>
+<ol style="list-style-type: decimal">
+<li><p>epithelial</p></li>
+<li><p>fibroblast</p></li>
+<li><p>endothelial</p></li>
+<li><p>myeloid</p></li>
+<li><p>T cells</p></li>
+<li><p>B cells</p></li>
+<li><p>plasma cells</p></li>
+</ol>
+<p>Compared with CGS in terms of composition, IM and GC samples (both tumor and stromal):</p>
+<ul>
+<li><p>↑ B/T cells</p></li>
+<li><p>↑ myeloid cells</p></li>
+<li><p>↑ fibroblasts</p></li>
+<li><p>↓ epithelial cells
+This epithelial contraction alongside immune/stromal expansion increases as disease progresses.</p></li>
+</ul>
+<p>CNV analysis of 9,218 epithelial cells identified 12 clusters (k=12), separating normal, transitional (proto-malignant), and malignant epithelial states, with malignant clusters showing the highest CNV burden and confinement to tumor tissue.</p>
+<p>Trajectory analysis with Monocle2 and GSEA revealed that malignant cells appear toward the end of the trajectory and are not uniform; they comprise at least two transcriptional subtypes: (1) epithelial-like and (2) EMT/inflammation-like malignant cells.</p>
+<p>Cell–cell communication wuth CellChat showed strongly increased epithelial interactions, especially with T cells, fibroblasts, and myeloid cells, dominated by the CD44–ECM signaling axis.</p>
+<p>SCENIC identified 51 TF regulons. Among them, HNF4A/HNF4G, ETS2, and KLF3 regulated the most abundant target genes, each exceeding 100 targets. Additionally, 21 TFs exhibited distinctively high activity scores in malignant gastric epithelial cells. Several TFs (HNF4A, KLF3, FOSL1, TCF7L2, BCL3, RELB, and ONECUT2) were linked to poor prognosis, while others (CDX2, CDX1, and POLE3) were correlated with favorable outcomes in GC patients.</p>
+<p>Briefly, this study not only reveals key mechanisms in the evolution of GC but is also clinically relevant.</p>
+</div>
+<div id="evaluation-based-on-criteria" class="section level3 unnumbered hasAnchor">
+<h3>Evaluation based on criteria<a href="reproducible-science.html#evaluation-based-on-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Study Purpose</li>
+</ul>
+<p>Answer: Yes. The introduction clearly states the objectives and research questions of the study.</p>
+<p>“<em>In this study, we integrated scRNA-seq datasets from chronic gastritis (superficial, CGS), IM, GC, and matched adjacent normal tissues. We first used clustering and annotation to precisely locate epithelial populations and combined inferCNV to identify malignant epithelial clones within GC, thereby reducing benign–malignant signal confounding. We then applied cell–cell communication analysis to delineate key interaction axes between tumor-derived epithelial cells and fibroblasts/macrophages; next, trajectory/pseudotime analyses were employed to reconstruct state transitions and branching points from early lesions to malignant transformation; finally, SCENIC was used to resolve transcription-factor networks, defining tumor-specific programs that are activated or repressed, as well as conserved basal epithelial programs. This work aims to address three core questions: (1) whether malignant epithelium arises from specific progenitor branches and the molecular timing and ecological conditions of such bifurcation; (2) whether epithelial–CAF/TAM interaction modules constitute key drivers of proliferation, immune evasion, and matrix remodeling; and (3) which transcription-factor programs govern malignant transformation and could serve as early warning markers and therapeutic targets. Through this integrative strategy, we seek to provide coherent evidence for the cellular ecology and translational biomarkers underlying the initiation and progression of GC.</em>”
+<span class="citation">(<a href="#ref-li2026gastric">Li et al. 2026</a>)</span></p>
+<ul>
+<li><strong>Data Availability Statement</strong></li>
+</ul>
+<p>Answer: Yes. The paper includes a dedicated “Data Availability” section explaining where the datasets and code can be accessed.</p>
+<ul>
+<li><strong>Data Location</strong></li>
+</ul>
+<p>Answer: Found Value. Analysis code is included in supplementary materials, they used publicly available in GEO dataset (GSE150290).</p>
+<ul>
+<li><strong>Study Location</strong></li>
+</ul>
+<p>Answer: Yes. Information is available in the GEO database.</p>
+<ul>
+<li><strong>Author Review</strong></li>
+</ul>
+<p>Answer: Found value. Contact information is available in the supplementary methods documents.</p>
+<p>“Correspondences:
+Yunhan Wen, Email: <a href="mailto:yunhanwen2014@163.com" class="email">yunhanwen2014@163.com</a>;
+Bo Long, Email: <a href="mailto:longbo_107@163.com" class="email">longbo_107@163.com</a>.” [S1 Supplementary methods]</p>
+<ul>
+<li><strong>Ethics Statement</strong></li>
+</ul>
+<p>Answer: Yes.</p>
+<p>“<em>As this study involved computational analysis of publicly available, anonymized data with appropriate consent obtained in the original studies, no additional ethics approval was required.</em>” <span class="citation">(<a href="#ref-li2026gastric">Li et al. 2026</a>)</span></p>
+<ul>
+<li><strong>Funding Statement</strong></li>
+</ul>
+<p>Answer: Yes</p>
+<p>“<em>Funding: This work was supported by the Higher Education Innovation Fund Project of Gansu Provincial Department of Education (Grant No. 2024B-020). There was no additional external funding received for this study. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.</em>” <span class="citation">(<a href="#ref-li2026gastric">Li et al. 2026</a>)</span></p>
+<ul>
+<li><strong>Code Availability</strong></li>
+</ul>
+<p>Answer: Yes. Custom R code, analysis scripts, and computational workflows used in this study are provided as Supplementary Material (Supplementary R code.zip).</p>
+</div>
+<div id="code-reproducibility" class="section level3 unnumbered hasAnchor">
+<h3>Code reproducibility<a href="reproducible-science.html#code-reproducibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supplementary code includes 5 scripts:</p>
+<ul>
+<li><p>01_Data_preparation.R</p></li>
+<li><p>02.infercnv.R</p></li>
+<li><p>03.calculate cnv score.R</p></li>
+<li><p>04.GC-cellchat.R</p></li>
+<li><p>05.TF analysis.R</p></li>
+</ul>
+<p>I examined the code and attempted to replicate the results. However, the supplementary code folder lacked the data used by the authors. I tried loading the official dataset and running it with the provided code, but the authors most likely used a preprocessed and already formatted version of the dataset. As a result, an exact replication of the code using the same dataset became impossible. For this issue, 1 point will be deducted.</p>
+<p>The code comments were written in inconsistent styles, and some comments were in Chinese, which negatively affected the overall readability and styling. However, this is not a critical issue, so I will deduct 0.5 points.</p>
+<p>Overall, the code readability was fairly intuitive, although the code could have been cleaner. Therefore, another 0.5 points will be deducted.</p>
+<p>The supplementary documentation clearly explains all parameter choices used in the code. Theoretically, if I had been provided with the formatted dataset, I would have been able to replicate the results presented in the paper. However, I could not verify this in practice.</p>
+<p>To still attempt reproducing the code, I will generate fake datasets for the count matrix and metadata, create a Seurat object, and then try to reproduce one of the figures.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="reproducible-science.html#cb30-1" tabindex="-1"></a><span class="fu">library</span>(Seurat)</span>
+<span id="cb30-2"><a href="reproducible-science.html#cb30-2" tabindex="-1"></a><span class="fu">library</span>(harmony)</span>
+<span id="cb30-3"><a href="reproducible-science.html#cb30-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb30-4"><a href="reproducible-science.html#cb30-4" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="reproducible-science.html#cb30-5" tabindex="-1"></a><span class="co"># AI generated fake data set</span></span>
+<span id="cb30-6"><a href="reproducible-science.html#cb30-6" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb30-7"><a href="reproducible-science.html#cb30-7" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="reproducible-science.html#cb30-8" tabindex="-1"></a><span class="co"># Fake count matrix: 1000 genes x 200 cells</span></span>
+<span id="cb30-9"><a href="reproducible-science.html#cb30-9" tabindex="-1"></a>counts <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb30-10"><a href="reproducible-science.html#cb30-10" tabindex="-1"></a>  <span class="fu">rpois</span>(<span class="dv">1000</span> <span class="sc">*</span> <span class="dv">200</span>, <span class="at">lambda =</span> <span class="dv">5</span>),</span>
+<span id="cb30-11"><a href="reproducible-science.html#cb30-11" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">1000</span>,</span>
+<span id="cb30-12"><a href="reproducible-science.html#cb30-12" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">200</span></span>
+<span id="cb30-13"><a href="reproducible-science.html#cb30-13" tabindex="-1"></a>)</span>
+<span id="cb30-14"><a href="reproducible-science.html#cb30-14" tabindex="-1"></a></span>
+<span id="cb30-15"><a href="reproducible-science.html#cb30-15" tabindex="-1"></a><span class="co"># Add some realistic gene names</span></span>
+<span id="cb30-16"><a href="reproducible-science.html#cb30-16" tabindex="-1"></a><span class="fu">rownames</span>(counts) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Gene&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>)</span>
+<span id="cb30-17"><a href="reproducible-science.html#cb30-17" tabindex="-1"></a><span class="fu">rownames</span>(counts)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;MT-&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb30-18"><a href="reproducible-science.html#cb30-18" tabindex="-1"></a><span class="fu">rownames</span>(counts)[<span class="dv">11</span><span class="sc">:</span><span class="dv">30</span>] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;RPL&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb30-19"><a href="reproducible-science.html#cb30-19" tabindex="-1"></a><span class="fu">rownames</span>(counts)[<span class="dv">31</span><span class="sc">:</span><span class="dv">40</span>] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;HB&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb30-20"><a href="reproducible-science.html#cb30-20" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="reproducible-science.html#cb30-21" tabindex="-1"></a><span class="fu">colnames</span>(counts) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Cell&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">200</span>)</span>
+<span id="cb30-22"><a href="reproducible-science.html#cb30-22" tabindex="-1"></a></span>
+<span id="cb30-23"><a href="reproducible-science.html#cb30-23" tabindex="-1"></a><span class="co"># Make ribosomal genes high enough to pass percent_ribo &gt; 3</span></span>
+<span id="cb30-24"><a href="reproducible-science.html#cb30-24" tabindex="-1"></a>counts[<span class="dv">11</span><span class="sc">:</span><span class="dv">30</span>, ] <span class="ot">&lt;-</span> counts[<span class="dv">11</span><span class="sc">:</span><span class="dv">30</span>, ] <span class="sc">+</span> <span class="fu">rpois</span>(<span class="dv">20</span> <span class="sc">*</span> <span class="dv">200</span>, <span class="at">lambda =</span> <span class="dv">20</span>)</span>
+<span id="cb30-25"><a href="reproducible-science.html#cb30-25" tabindex="-1"></a></span>
+<span id="cb30-26"><a href="reproducible-science.html#cb30-26" tabindex="-1"></a><span class="co"># Make hemoglobin genes low enough to pass percent_hb &lt; 1</span></span>
+<span id="cb30-27"><a href="reproducible-science.html#cb30-27" tabindex="-1"></a>counts[<span class="dv">31</span><span class="sc">:</span><span class="dv">40</span>, ] <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">10</span> <span class="sc">*</span> <span class="dv">200</span>, <span class="at">lambda =</span> <span class="fl">0.1</span>)</span>
+<span id="cb30-28"><a href="reproducible-science.html#cb30-28" tabindex="-1"></a></span>
+<span id="cb30-29"><a href="reproducible-science.html#cb30-29" tabindex="-1"></a><span class="co"># Keep mitochondrial genes low enough to pass percent_mito &lt; 15</span></span>
+<span id="cb30-30"><a href="reproducible-science.html#cb30-30" tabindex="-1"></a>counts[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, ] <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">10</span> <span class="sc">*</span> <span class="dv">200</span>, <span class="at">lambda =</span> <span class="dv">1</span>)</span>
+<span id="cb30-31"><a href="reproducible-science.html#cb30-31" tabindex="-1"></a></span>
+<span id="cb30-32"><a href="reproducible-science.html#cb30-32" tabindex="-1"></a><span class="co"># Fake metadata</span></span>
+<span id="cb30-33"><a href="reproducible-science.html#cb30-33" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb30-34"><a href="reproducible-science.html#cb30-34" tabindex="-1"></a>  <span class="at">orig.ident =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Sample1&quot;</span>, <span class="st">&quot;Sample2&quot;</span>), <span class="at">each =</span> <span class="dv">100</span>),</span>
+<span id="cb30-35"><a href="reproducible-science.html#cb30-35" tabindex="-1"></a>  <span class="at">Sample_source =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Tumor&quot;</span>, <span class="st">&quot;Normal&quot;</span>), <span class="at">each =</span> <span class="dv">100</span>),</span>
+<span id="cb30-36"><a href="reproducible-science.html#cb30-36" tabindex="-1"></a>  <span class="at">S.Score =</span> <span class="fu">rnorm</span>(<span class="dv">200</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.2</span>),</span>
+<span id="cb30-37"><a href="reproducible-science.html#cb30-37" tabindex="-1"></a>  <span class="at">G2M.Score =</span> <span class="fu">rnorm</span>(<span class="dv">200</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="fl">0.2</span>),</span>
+<span id="cb30-38"><a href="reproducible-science.html#cb30-38" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="fu">colnames</span>(counts)</span>
+<span id="cb30-39"><a href="reproducible-science.html#cb30-39" tabindex="-1"></a>)</span>
+<span id="cb30-40"><a href="reproducible-science.html#cb30-40" tabindex="-1"></a></span>
+<span id="cb30-41"><a href="reproducible-science.html#cb30-41" tabindex="-1"></a><span class="co"># Create Seurat object</span></span>
+<span id="cb30-42"><a href="reproducible-science.html#cb30-42" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">CreateSeuratObject</span>(</span>
+<span id="cb30-43"><a href="reproducible-science.html#cb30-43" tabindex="-1"></a>  <span class="at">counts =</span> counts,</span>
+<span id="cb30-44"><a href="reproducible-science.html#cb30-44" tabindex="-1"></a>  <span class="at">meta.data =</span> metadata</span>
+<span id="cb30-45"><a href="reproducible-science.html#cb30-45" tabindex="-1"></a>)</span>
+<span id="cb30-46"><a href="reproducible-science.html#cb30-46" tabindex="-1"></a></span>
+<span id="cb30-47"><a href="reproducible-science.html#cb30-47" tabindex="-1"></a><span class="co"># Add QC percentages needed by your code</span></span>
+<span id="cb30-48"><a href="reproducible-science.html#cb30-48" tabindex="-1"></a>my_obj[[<span class="st">&quot;percent_mito&quot;</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(my_obj, <span class="at">pattern =</span> <span class="st">&quot;^MT-&quot;</span>)</span>
+<span id="cb30-49"><a href="reproducible-science.html#cb30-49" tabindex="-1"></a>my_obj[[<span class="st">&quot;percent_ribo&quot;</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(my_obj, <span class="at">pattern =</span> <span class="st">&quot;^RPL&quot;</span>)</span>
+<span id="cb30-50"><a href="reproducible-science.html#cb30-50" tabindex="-1"></a>my_obj[[<span class="st">&quot;percent_hb&quot;</span>]] <span class="ot">&lt;-</span> <span class="fu">PercentageFeatureSet</span>(my_obj, <span class="at">pattern =</span> <span class="st">&quot;^HB&quot;</span>)</span>
+<span id="cb30-51"><a href="reproducible-science.html#cb30-51" tabindex="-1"></a></span>
+<span id="cb30-52"><a href="reproducible-science.html#cb30-52" tabindex="-1"></a><span class="co"># Code from 01_Data_preparation.R</span></span>
+<span id="cb30-53"><a href="reproducible-science.html#cb30-53" tabindex="-1"></a><span class="do">## 5.6 filter genes and cells----</span></span>
+<span id="cb30-54"><a href="reproducible-science.html#cb30-54" tabindex="-1"></a></span>
+<span id="cb30-55"><a href="reproducible-science.html#cb30-55" tabindex="-1"></a>selected_c <span class="ot">&lt;-</span> <span class="fu">WhichCells</span>(my_obj, </span>
+<span id="cb30-56"><a href="reproducible-science.html#cb30-56" tabindex="-1"></a>                         <span class="at">expression =</span> nFeature_RNA <span class="sc">&gt;</span> <span class="dv">200</span> <span class="sc">&amp;</span> </span>
+<span id="cb30-57"><a href="reproducible-science.html#cb30-57" tabindex="-1"></a>                           nFeature_RNA <span class="sc">&lt;</span><span class="dv">5000</span>  <span class="sc">&amp;</span> </span>
+<span id="cb30-58"><a href="reproducible-science.html#cb30-58" tabindex="-1"></a>                           nCount_RNA <span class="sc">&gt;</span> <span class="dv">500</span>    <span class="sc">&amp;</span>  </span>
+<span id="cb30-59"><a href="reproducible-science.html#cb30-59" tabindex="-1"></a>                           nCount_RNA <span class="sc">&lt;</span> <span class="dv">50000</span>)</span>
+<span id="cb30-60"><a href="reproducible-science.html#cb30-60" tabindex="-1"></a><span class="fu">length</span>(selected_c)</span></code></pre></div>
+<pre><code>## [1] 200</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="reproducible-science.html#cb32-1" tabindex="-1"></a><span class="do">## filter genes</span></span>
+<span id="cb32-2"><a href="reproducible-science.html#cb32-2" tabindex="-1"></a><span class="co">#selected_f &lt;- rownames(my_obj)[Matrix::rowSums(my_obj@assays$RNA@counts &gt; 0 ) &gt; 3] #code fails here, but it&#39;s my fault because i use the wrong version of seurat</span></span>
+<span id="cb32-3"><a href="reproducible-science.html#cb32-3" tabindex="-1"></a>selected_f <span class="ot">&lt;-</span> <span class="fu">rownames</span>(my_obj)[Matrix<span class="sc">::</span><span class="fu">rowSums</span>(<span class="fu">LayerData</span>(my_obj, <span class="at">assay =</span> <span class="st">&quot;RNA&quot;</span>, <span class="at">layer =</span> <span class="st">&quot;counts&quot;</span>) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">3</span>] <span class="co"># new syntax </span></span>
+<span id="cb32-4"><a href="reproducible-science.html#cb32-4" tabindex="-1"></a><span class="fu">length</span>(selected_f)</span></code></pre></div>
+<pre><code>## [1] 1000</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="reproducible-science.html#cb34-1" tabindex="-1"></a>my_obj.filt <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_obj, </span>
+<span id="cb34-2"><a href="reproducible-science.html#cb34-2" tabindex="-1"></a>                      <span class="at">features =</span> selected_f,</span>
+<span id="cb34-3"><a href="reproducible-science.html#cb34-3" tabindex="-1"></a>                      <span class="at">cells =</span> selected_c)</span>
+<span id="cb34-4"><a href="reproducible-science.html#cb34-4" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="reproducible-science.html#cb34-5" tabindex="-1"></a><span class="fu">dim</span>(my_obj) </span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="reproducible-science.html#cb36-1" tabindex="-1"></a><span class="fu">dim</span>(my_obj.filt) </span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="reproducible-science.html#cb38-1" tabindex="-1"></a><span class="fu">table</span>(my_obj<span class="sc">@</span>meta.data<span class="sc">$</span>orig.ident) </span></code></pre></div>
+<pre><code>## 
+## Sample1 Sample2 
+##     100     100</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="reproducible-science.html#cb40-1" tabindex="-1"></a><span class="fu">table</span>(my_obj.filt<span class="sc">@</span>meta.data<span class="sc">$</span>orig.ident) </span></code></pre></div>
+<pre><code>## 
+## Sample1 Sample2 
+##     100     100</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="reproducible-science.html#cb42-1" tabindex="-1"></a><span class="do">## (2).filter:mt/ribo/hb</span></span>
+<span id="cb42-2"><a href="reproducible-science.html#cb42-2" tabindex="-1"></a>selected_mito <span class="ot">&lt;-</span> <span class="fu">WhichCells</span>(my_obj.filt, </span>
+<span id="cb42-3"><a href="reproducible-science.html#cb42-3" tabindex="-1"></a>                            <span class="at">expression =</span> percent_mito <span class="sc">&lt;</span> <span class="dv">15</span>)</span>
+<span id="cb42-4"><a href="reproducible-science.html#cb42-4" tabindex="-1"></a>selected_ribo <span class="ot">&lt;-</span> <span class="fu">WhichCells</span>(my_obj.filt, </span>
+<span id="cb42-5"><a href="reproducible-science.html#cb42-5" tabindex="-1"></a>                            <span class="at">expression =</span> percent_ribo <span class="sc">&gt;</span> <span class="dv">3</span>)</span>
+<span id="cb42-6"><a href="reproducible-science.html#cb42-6" tabindex="-1"></a>selected_hb <span class="ot">&lt;-</span> <span class="fu">WhichCells</span>(my_obj.filt, </span>
+<span id="cb42-7"><a href="reproducible-science.html#cb42-7" tabindex="-1"></a>                          <span class="at">expression =</span> percent_hb <span class="sc">&lt;</span> <span class="dv">1</span>)</span>
+<span id="cb42-8"><a href="reproducible-science.html#cb42-8" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="reproducible-science.html#cb42-9" tabindex="-1"></a><span class="fu">length</span>(selected_mito)</span></code></pre></div>
+<pre><code>## [1] 200</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="reproducible-science.html#cb44-1" tabindex="-1"></a><span class="fu">length</span>(selected_ribo)</span></code></pre></div>
+<pre><code>## [1] 200</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="reproducible-science.html#cb46-1" tabindex="-1"></a><span class="fu">length</span>(selected_hb)</span></code></pre></div>
+<pre><code>## [1] 200</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="reproducible-science.html#cb48-1" tabindex="-1"></a>my_obj.filt <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_obj.filt, <span class="at">cells =</span> selected_mito)</span>
+<span id="cb48-2"><a href="reproducible-science.html#cb48-2" tabindex="-1"></a><span class="fu">dim</span>(my_obj.filt) </span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="reproducible-science.html#cb50-1" tabindex="-1"></a>my_obj.filt <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_obj.filt, <span class="at">cells =</span> selected_ribo)</span>
+<span id="cb50-2"><a href="reproducible-science.html#cb50-2" tabindex="-1"></a><span class="fu">dim</span>(my_obj.filt) </span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="reproducible-science.html#cb52-1" tabindex="-1"></a>my_obj.filt <span class="ot">&lt;-</span> <span class="fu">subset</span>(my_obj.filt, <span class="at">cells =</span> selected_hb)</span>
+<span id="cb52-2"><a href="reproducible-science.html#cb52-2" tabindex="-1"></a><span class="fu">dim</span>(my_obj.filt) </span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="reproducible-science.html#cb54-1" tabindex="-1"></a><span class="fu">table</span>(my_obj.filt<span class="sc">$</span>orig.ident) </span></code></pre></div>
+<pre><code>## 
+## Sample1 Sample2 
+##     100     100</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="reproducible-science.html#cb56-1" tabindex="-1"></a><span class="do">## 6.1 NormalizeData----</span></span>
+<span id="cb56-2"><a href="reproducible-science.html#cb56-2" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">NormalizeData</span>(my_obj.filt, </span>
+<span id="cb56-3"><a href="reproducible-science.html#cb56-3" tabindex="-1"></a>                        <span class="at">normalization.method =</span> <span class="st">&quot;LogNormalize&quot;</span>, </span>
+<span id="cb56-4"><a href="reproducible-science.html#cb56-4" tabindex="-1"></a>                        <span class="at">scale.factor =</span> <span class="dv">10000</span>)</span>
+<span id="cb56-5"><a href="reproducible-science.html#cb56-5" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="reproducible-science.html#cb56-6" tabindex="-1"></a><span class="do">## 6.2 FindVariableFeatures ----</span></span>
+<span id="cb56-7"><a href="reproducible-science.html#cb56-7" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">FindVariableFeatures</span>(my_obj, </span>
+<span id="cb56-8"><a href="reproducible-science.html#cb56-8" tabindex="-1"></a>                               <span class="at">selection.method =</span> <span class="st">&quot;vst&quot;</span>, </span>
+<span id="cb56-9"><a href="reproducible-science.html#cb56-9" tabindex="-1"></a>                               <span class="at">nfeatures =</span> <span class="dv">5000</span>)</span>
+<span id="cb56-10"><a href="reproducible-science.html#cb56-10" tabindex="-1"></a></span>
+<span id="cb56-11"><a href="reproducible-science.html#cb56-11" tabindex="-1"></a><span class="do">## 6.3 ScaleData ----</span></span>
+<span id="cb56-12"><a href="reproducible-science.html#cb56-12" tabindex="-1"></a><span class="do">## 这里我们选择了vars.to.regress 细胞周期</span></span>
+<span id="cb56-13"><a href="reproducible-science.html#cb56-13" tabindex="-1"></a><span class="fu">table</span>(my_obj<span class="sc">$</span>Sample_source)</span></code></pre></div>
+<pre><code>## 
+## Normal  Tumor 
+##    100    100</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="reproducible-science.html#cb58-1" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">ScaleData</span>(my_obj,</span>
+<span id="cb58-2"><a href="reproducible-science.html#cb58-2" tabindex="-1"></a>                    <span class="at">vars.to.regress =</span> <span class="fu">c</span>(<span class="st">&quot;S.Score&quot;</span>, <span class="st">&quot;G2M.Score&quot;</span>),</span>
+<span id="cb58-3"><a href="reproducible-science.html#cb58-3" tabindex="-1"></a>                    <span class="at">features=</span><span class="fu">rownames</span>(my_obj))</span>
+<span id="cb58-4"><a href="reproducible-science.html#cb58-4" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="reproducible-science.html#cb58-5" tabindex="-1"></a><span class="co">#saveRDS(my_obj,</span></span>
+<span id="cb58-6"><a href="reproducible-science.html#cb58-6" tabindex="-1"></a>        <span class="co">#file=paste0(Data_saveloc,&quot;/02_&quot;,data_type,&quot;_obj_ScaleData.rds&quot;)) #no need to save data </span></span>
+<span id="cb58-7"><a href="reproducible-science.html#cb58-7" tabindex="-1"></a></span>
+<span id="cb58-8"><a href="reproducible-science.html#cb58-8" tabindex="-1"></a>feature_genes <span class="ot">&lt;-</span> <span class="fu">VariableFeatures</span>(<span class="at">object =</span> my_obj)</span>
+<span id="cb58-9"><a href="reproducible-science.html#cb58-9" tabindex="-1"></a></span>
+<span id="cb58-10"><a href="reproducible-science.html#cb58-10" tabindex="-1"></a>g2m.genes <span class="ot">&lt;-</span> Seurat<span class="sc">::</span>cc.genes.updated<span class="fl">.2019</span><span class="sc">$</span>g2m.genes</span>
+<span id="cb58-11"><a href="reproducible-science.html#cb58-11" tabindex="-1"></a>s.genes <span class="ot">&lt;-</span> Seurat<span class="sc">::</span>cc.genes.updated<span class="fl">.2019</span><span class="sc">$</span>s.genes</span>
+<span id="cb58-12"><a href="reproducible-science.html#cb58-12" tabindex="-1"></a></span>
+<span id="cb58-13"><a href="reproducible-science.html#cb58-13" tabindex="-1"></a>g2m.genes <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(g2m.genes)</span>
+<span id="cb58-14"><a href="reproducible-science.html#cb58-14" tabindex="-1"></a><span class="fu">names</span>(g2m.genes) <span class="ot">&lt;-</span> <span class="st">&quot;Gene&quot;</span></span>
+<span id="cb58-15"><a href="reproducible-science.html#cb58-15" tabindex="-1"></a></span>
+<span id="cb58-16"><a href="reproducible-science.html#cb58-16" tabindex="-1"></a>s.genes <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(s.genes)</span>
+<span id="cb58-17"><a href="reproducible-science.html#cb58-17" tabindex="-1"></a><span class="fu">names</span>(s.genes) <span class="ot">&lt;-</span> <span class="st">&quot;Gene&quot;</span></span>
+<span id="cb58-18"><a href="reproducible-science.html#cb58-18" tabindex="-1"></a></span>
+<span id="cb58-19"><a href="reproducible-science.html#cb58-19" tabindex="-1"></a>cell_cycle_genes <span class="ot">&lt;-</span> <span class="fu">rbind</span>(g2m.genes, s.genes)</span>
+<span id="cb58-20"><a href="reproducible-science.html#cb58-20" tabindex="-1"></a>feature_genes <span class="ot">&lt;-</span> feature_genes[<span class="sc">!</span>feature_genes <span class="sc">%in%</span> cell_cycle_genes<span class="sc">$</span>Gene]</span>
+<span id="cb58-21"><a href="reproducible-science.html#cb58-21" tabindex="-1"></a></span>
+<span id="cb58-22"><a href="reproducible-science.html#cb58-22" tabindex="-1"></a><span class="do">## 6.4 RunPCA ----</span></span>
+<span id="cb58-23"><a href="reproducible-science.html#cb58-23" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">RunPCA</span>(my_obj, </span>
+<span id="cb58-24"><a href="reproducible-science.html#cb58-24" tabindex="-1"></a>                 <span class="at">features =</span> feature_genes,</span>
+<span id="cb58-25"><a href="reproducible-science.html#cb58-25" tabindex="-1"></a>                 <span class="at">npcs =</span> <span class="dv">20</span>, <span class="co">#originally it had 100, but i reduced it to 20 because I have a small fake dataset </span></span>
+<span id="cb58-26"><a href="reproducible-science.html#cb58-26" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb58-27"><a href="reproducible-science.html#cb58-27" tabindex="-1"></a></span>
+<span id="cb58-28"><a href="reproducible-science.html#cb58-28" tabindex="-1"></a><span class="do">## 6.5 RunHarmony ----</span></span>
+<span id="cb58-29"><a href="reproducible-science.html#cb58-29" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">RunHarmony</span>(my_obj,</span>
+<span id="cb58-30"><a href="reproducible-science.html#cb58-30" tabindex="-1"></a>                     <span class="at">group.by.vars =</span> <span class="st">&quot;orig.ident&quot;</span>,</span>
+<span id="cb58-31"><a href="reproducible-science.html#cb58-31" tabindex="-1"></a>                     <span class="at">max_iter =</span> <span class="dv">40</span>) <span class="co">#in new version parameter max.iter.harmony was replaced with max_iter</span></span></code></pre></div>
+<pre><code>## Initializing centroids</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="reproducible-science.html#cb60-1" tabindex="-1"></a><span class="fu">dim</span>(my_obj)</span></code></pre></div>
+<pre><code>## [1] 1000  200</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="reproducible-science.html#cb62-1" tabindex="-1"></a><span class="co">#save(my_obj,</span></span>
+<span id="cb62-2"><a href="reproducible-science.html#cb62-2" tabindex="-1"></a>     <span class="co">#file=paste0(Data_saveloc,&quot;/03_&quot;,data_type,&quot;_obj_RunHarmonyData.Rdata&quot;)) #no need to save this data</span></span>
+<span id="cb62-3"><a href="reproducible-science.html#cb62-3" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="reproducible-science.html#cb62-4" tabindex="-1"></a><span class="do">## 3.VlnPlot 颜色设置----</span></span>
+<span id="cb62-5"><a href="reproducible-science.html#cb62-5" tabindex="-1"></a>my36colors <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&#39;#E5D2DD&#39;</span>, <span class="st">&#39;#53A85F&#39;</span>, <span class="st">&#39;#F1BB72&#39;</span>, <span class="st">&#39;#F3B1A0&#39;</span>, <span class="st">&#39;#D6E7A3&#39;</span>, <span class="st">&#39;#57C3F3&#39;</span>, <span class="st">&#39;#476D87&#39;</span>,</span>
+<span id="cb62-6"><a href="reproducible-science.html#cb62-6" tabindex="-1"></a>                        <span class="st">&#39;#E95C59&#39;</span>, <span class="st">&#39;#E59CC4&#39;</span>, <span class="st">&#39;#AB3282&#39;</span>, <span class="st">&#39;#23452F&#39;</span>, <span class="st">&#39;#BD956A&#39;</span>, <span class="st">&#39;#8C549C&#39;</span>, <span class="st">&#39;#585658&#39;</span>,</span>
+<span id="cb62-7"><a href="reproducible-science.html#cb62-7" tabindex="-1"></a>                        <span class="st">&#39;#9FA3A8&#39;</span>, <span class="st">&#39;#E0D4CA&#39;</span>, <span class="st">&#39;#5F3D69&#39;</span>, <span class="st">&#39;#C5DEBA&#39;</span>, <span class="st">&#39;#58A4C3&#39;</span>, <span class="st">&#39;#E4C755&#39;</span>, <span class="st">&#39;#F7F398&#39;</span>,</span>
+<span id="cb62-8"><a href="reproducible-science.html#cb62-8" tabindex="-1"></a>                        <span class="st">&#39;#AA9A59&#39;</span>, <span class="st">&#39;#E63863&#39;</span>, <span class="st">&#39;#E39A35&#39;</span>, <span class="st">&#39;#C1E6F3&#39;</span>, <span class="st">&#39;#6778AE&#39;</span>, <span class="st">&#39;#91D0BE&#39;</span>, <span class="st">&#39;#B53E2B&#39;</span>,</span>
+<span id="cb62-9"><a href="reproducible-science.html#cb62-9" tabindex="-1"></a>                        <span class="st">&#39;#712820&#39;</span>, <span class="st">&#39;#DCC1DD&#39;</span>, <span class="st">&#39;#CCE0F5&#39;</span>,  <span class="st">&#39;#CCC9E6&#39;</span>, <span class="st">&#39;#625D9E&#39;</span>, <span class="st">&#39;#68A180&#39;</span>, <span class="st">&#39;#3A6963&#39;</span>,</span>
+<span id="cb62-10"><a href="reproducible-science.html#cb62-10" tabindex="-1"></a>                        <span class="st">&#39;#968175&#39;</span></span>
+<span id="cb62-11"><a href="reproducible-science.html#cb62-11" tabindex="-1"></a>)</span>
+<span id="cb62-12"><a href="reproducible-science.html#cb62-12" tabindex="-1"></a></span>
+<span id="cb62-13"><a href="reproducible-science.html#cb62-13" tabindex="-1"></a><span class="do">## 5.循环进行PC10-PC50----</span></span>
+<span id="cb62-14"><a href="reproducible-science.html#cb62-14" tabindex="-1"></a>pcNO<span class="ot">=</span><span class="dv">10</span></span>
+<span id="cb62-15"><a href="reproducible-science.html#cb62-15" tabindex="-1"></a>res<span class="ot">=</span><span class="fl">0.02</span></span>
+<span id="cb62-16"><a href="reproducible-science.html#cb62-16" tabindex="-1"></a></span>
+<span id="cb62-17"><a href="reproducible-science.html#cb62-17" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="fu">RunUMAP</span>(my_obj,<span class="at">reduction =</span> <span class="st">&quot;harmony&quot;</span>, <span class="at">dims =</span> <span class="dv">1</span><span class="sc">:</span>pcNO)</span>
+<span id="cb62-18"><a href="reproducible-science.html#cb62-18" tabindex="-1"></a></span>
+<span id="cb62-19"><a href="reproducible-science.html#cb62-19" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">DimPlot</span>(my_obj,</span>
+<span id="cb62-20"><a href="reproducible-science.html#cb62-20" tabindex="-1"></a>              <span class="at">reduction =</span> <span class="st">&quot;umap&quot;</span>,</span>
+<span id="cb62-21"><a href="reproducible-science.html#cb62-21" tabindex="-1"></a>              <span class="at">group.by =</span> <span class="st">&quot;orig.ident&quot;</span>,</span>
+<span id="cb62-22"><a href="reproducible-science.html#cb62-22" tabindex="-1"></a>              <span class="at">pt.size =</span> <span class="fl">0.1</span>,</span>
+<span id="cb62-23"><a href="reproducible-science.html#cb62-23" tabindex="-1"></a>              <span class="at">label =</span> T,</span>
+<span id="cb62-24"><a href="reproducible-science.html#cb62-24" tabindex="-1"></a>              <span class="at">repel =</span> T,</span>
+<span id="cb62-25"><a href="reproducible-science.html#cb62-25" tabindex="-1"></a>              <span class="at">label.size =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="fu">paste0</span>(<span class="st">&quot;PC_&quot;</span>,pcNO))</span>
+<span id="cb62-26"><a href="reproducible-science.html#cb62-26" tabindex="-1"></a></span>
+<span id="cb62-27"><a href="reproducible-science.html#cb62-27" tabindex="-1"></a><span class="fu">print</span>(p1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>The good news is that the code runs, Harmony/UMAP pipeline executes, Seurat object structure is valid. The bad news is that the synthetic data I generated using AI is entirely random, so no meaningful clusters appear. I also found no usage of the color theme my36colors anywhere in the codes, making it redundant and safe to remove. Below is the original figure generated using the same code:</p>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="images/original_graph_from_gc_paper.png" alt="10A. Independent single-cell validation of epithelial malignancy and inferred copy-number alterations in the GSE163558 cohort. UMAP visualization of 53,338 cells from GSE163558 clustered using PC=10 and resolution=0.02, yielding seven major cell clusters." width="80%" />
+<p class="caption">
+Figure 2: 10A. Independent single-cell validation of epithelial malignancy and inferred copy-number alterations in the GSE163558 cohort. UMAP visualization of 53,338 cells from GSE163558 clustered using PC=10 and resolution=0.02, yielding seven major cell clusters.
+</p>
+</div>
+<p>I suspect they also did not use labels directly in the code and instead added them manually, although I could be mistaken. Overall, I would give the code a reproducibility score of 3/5.</p>
+</div>
+<div id="conclusion" class="section level3 unnumbered hasAnchor">
+<h3>Conclusion<a href="reproducible-science.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The results of the reproducibility analysis and evaluation based on the given criteria appear plausible. Overall, I would say that this study is solid in terms of both documentation and presentation. The study is also clinically relevant and provides a good foundation for future research. However, the reproducibility of the code can only be fully assessed using the original processed datasets, which were not provided. Therefore, I cannot determine whether the study is fully reproducible.</p>
+<p>To improve reproducibility, I would recommend creating a single GitHub repository containing all datasets and scripts, as well as making the code comments more consistent and fully written in English.</p>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-li2026gastric" class="csl-entry">
+Li, X, M Guo, Y Wen, and B Long. 2026. <span>“Single-Cell Atlas of Gastric Cancer Reveals Malignant Epithelial Evolution and Regulatory Reprogramming of the Tumor Microenvironment.”</span> <em>PLOS ONE</em> 21 (4): e0347679. <a href="https://doi.org/10.1371/journal.pone.0347679">https://doi.org/10.1371/journal.pone.0347679</a>.
+</div>
 </div>
             </section>
 
@@ -208,7 +871,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="data-management.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sql.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ggplot2-ravenplot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -224,15 +887,14 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
     "github": false,
-    "facebook": false,
-    "twitter": false,
+    "facebook": true,
+    "twitter": true,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
     "vk": false,
     "whatsapp": false,
-    "all": false,
-    "google": false
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
   },
   "fontsettings": {
     "theme": "white",
@@ -240,8 +902,8 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/diteres/dsfb2_workflows_portfolio/edit/master/05-reproduciblescience.Rmd",
-    "text": "Edit"
+    "link": null,
+    "text": null
   },
   "history": {
     "link": null,
@@ -251,7 +913,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "download": null,
   "search": {
     "engine": "fuse",
     "options": null
@@ -263,20 +925,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>ggplot2: ravenplot | _main.knit</title>
+  <title>Project Leptospira | _main.knit</title>
   <meta name="description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="ggplot2: ravenplot | _main.knit" />
+  <meta property="og:title" content="Project Leptospira | _main.knit" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="ggplot2: ravenplot | _main.knit" />
+  <meta name="twitter:title" content="Project Leptospira | _main.knit" />
   
   <meta name="twitter:description" content="Portfolio created using the bookdown package as part of the DSFB2 course." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="reproducible-science.html"/>
-<link rel="next" href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"/>
+<link rel="prev" href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -257,85 +257,48 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ggplot2-ravenplot" class="section level1 unnumbered hasAnchor">
-<h1>ggplot2: ravenplot<a href="ggplot2-ravenplot.html#ggplot2-ravenplot" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A ggplot2 extension package providing fantasy-inspired themes, color palettes, and typography settings for atmospheric data visualizations.</p>
-<p>The <code>ravenplot</code> package extends ggplot2 by providing:</p>
-<ul>
-<li>10 color palettes: “vampire”, “vampire_heatmap”, “chocolate”, “chocolate_heatmap”, “witchy”, “witchy_heatmap”, “lotus”, “lotus_heatmap”, “tealish”, “tealish_heatmap”</li>
-</ul>
-<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<ul>
-<li><p>7 point styles (Unicode-based symbols): “rhombus”, “sun”, “heart”, “circle”, “square”, “triangle”, “diamond”</p></li>
-<li><p>4 font themes: “fancy”, “elegant”, “simple”, “standard”</p></li>
-<li><p>2 background themes: “transparent”, “vintage”</p></li>
-</ul>
-<div id="scatter-plot" class="section level2 unnumbered hasAnchor">
-<h2>Scatter plot<a href="ggplot2-ravenplot.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="ggplot2-ravenplot.html#cb63-1" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg, <span class="at">color =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
-<span id="cb63-2"><a href="ggplot2-ravenplot.html#cb63-2" tabindex="-1"></a>  <span class="fu">geom_raven_point</span>(<span class="at">dot_type =</span> <span class="st">&quot;heart&quot;</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb63-3"><a href="ggplot2-ravenplot.html#cb63-3" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">get_raven_palette</span>(<span class="st">&quot;vampire&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb63-4"><a href="ggplot2-ravenplot.html#cb63-4" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb63-5"><a href="ggplot2-ravenplot.html#cb63-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Scatter Plot&quot;</span>,</span>
-<span id="cb63-6"><a href="ggplot2-ravenplot.html#cb63-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Raven points with vampire palette&quot;</span>,</span>
-<span id="cb63-7"><a href="ggplot2-ravenplot.html#cb63-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Weight&quot;</span>,</span>
-<span id="cb63-8"><a href="ggplot2-ravenplot.html#cb63-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;MPG&quot;</span></span>
-<span id="cb63-9"><a href="ggplot2-ravenplot.html#cb63-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb63-10"><a href="ggplot2-ravenplot.html#cb63-10" tabindex="-1"></a>  <span class="fu">theme_raven</span>(</span>
-<span id="cb63-11"><a href="ggplot2-ravenplot.html#cb63-11" tabindex="-1"></a>    <span class="at">background_type =</span> <span class="st">&quot;vintage&quot;</span>,</span>
-<span id="cb63-12"><a href="ggplot2-ravenplot.html#cb63-12" tabindex="-1"></a>    <span class="at">font_theme =</span> <span class="st">&quot;fancy&quot;</span>,</span>
-<span id="cb63-13"><a href="ggplot2-ravenplot.html#cb63-13" tabindex="-1"></a>    <span class="at">color_theme =</span> <span class="st">&quot;vampire&quot;</span></span>
-<span id="cb63-14"><a href="ggplot2-ravenplot.html#cb63-14" tabindex="-1"></a>  ) </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div id="project-leptospira" class="section level1 unnumbered hasAnchor">
+<h1>Project Leptospira<a href="project-leptospira.html#project-leptospira" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>As this project is partially confidential, this section will focus on general information about <em>Leptospira</em>. The primary goal of this part of the portfolio is to demonstrate proper source citation skills.</p>
+<p>Therefore, eight facts about <em>Leptospira</em> are presented below.</p>
+<div id="eight-facts-about-leptospira" class="section level2 unnumbered hasAnchor">
+<h2>Eight Facts About <em>Leptospira</em><a href="project-leptospira.html#eight-facts-about-leptospira" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Leptospires are thin, helical, and extremely mobile <span class="citation">(<a href="#ref-ko_2009">Ko, Goarant, and Picardeau 2009</a>)</span>.</li>
+</ol>
+<div class="figure" style="text-align: left"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="data/leptospira_picture.png" alt="Dr. Priscyla Ribeiro and Dr. Claudio Figueira" width="80%" />
+<p class="caption">
+Figure 3: Dr. Priscyla Ribeiro and Dr. Claudio Figueira
+</p>
 </div>
-<div id="bar-plot" class="section level2 unnumbered hasAnchor">
-<h2>Bar plot<a href="ggplot2-ravenplot.html#bar-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="ggplot2-ravenplot.html#cb64-1" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(class, <span class="at">fill =</span> class)) <span class="sc">+</span></span>
-<span id="cb64-2"><a href="ggplot2-ravenplot.html#cb64-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb64-3"><a href="ggplot2-ravenplot.html#cb64-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">get_raven_palette</span>(<span class="st">&quot;tealish&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb64-4"><a href="ggplot2-ravenplot.html#cb64-4" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb64-5"><a href="ggplot2-ravenplot.html#cb64-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Bar Plot&quot;</span>,</span>
-<span id="cb64-6"><a href="ggplot2-ravenplot.html#cb64-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Vehicle classes&quot;</span>,</span>
-<span id="cb64-7"><a href="ggplot2-ravenplot.html#cb64-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Class&quot;</span>,</span>
-<span id="cb64-8"><a href="ggplot2-ravenplot.html#cb64-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Count&quot;</span></span>
-<span id="cb64-9"><a href="ggplot2-ravenplot.html#cb64-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb64-10"><a href="ggplot2-ravenplot.html#cb64-10" tabindex="-1"></a>  <span class="fu">theme_raven</span>(</span>
-<span id="cb64-11"><a href="ggplot2-ravenplot.html#cb64-11" tabindex="-1"></a>    <span class="at">background_type =</span> <span class="st">&quot;vintage&quot;</span>,</span>
-<span id="cb64-12"><a href="ggplot2-ravenplot.html#cb64-12" tabindex="-1"></a>    <span class="at">font_theme =</span> <span class="st">&quot;elegant&quot;</span>,</span>
-<span id="cb64-13"><a href="ggplot2-ravenplot.html#cb64-13" tabindex="-1"></a>    <span class="at">color_theme =</span> <span class="st">&quot;tealish&quot;</span>,</span>
-<span id="cb64-14"><a href="ggplot2-ravenplot.html#cb64-14" tabindex="-1"></a>    <span class="at">major_grid =</span> <span class="cn">FALSE</span></span>
-<span id="cb64-15"><a href="ggplot2-ravenplot.html#cb64-15" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb64-16"><a href="ggplot2-ravenplot.html#cb64-16" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>There are both pathogenic and non-pathogenic species. Human and animal infections are caused by only eight pathogenic species: L. interrogans, L. kirschneri, L. noguchi, L. santarosai, L. mayottensis, L. borgpetersenii, L. alexanderi, and L. weilli.</p></li>
+<li><p>Pathogenic species are the etiological agents of leptospirosis <span class="citation">(<a href="#ref-ncbi_nbk441858">National Center for Biotechnology Information 2024</a>)</span>.</p></li>
+<li><p>The genus Leptospira is currently subdivided into 68 recognized genomic species <span class="citation">(<a href="#ref-garcia_lopez_2024">Garcia-Lopez et al. 2024</a>)</span>.</p></li>
+<li><p>The average genome size of Leptospira is approximately 4,128,000 ± 221,345 base pairs.</p></li>
+<li><p>The average GC content of Leptospira ranges from 37.06% to 47.70% <span class="citation">(<a href="#ref-wilkinson_2021">Wilkinson et al. 2021</a>)</span>.</p></li>
+<li><p>The estimated worldwide annual incidence of leptospirosis exceeds 1 million cases, including approximately 59,000 deaths <span class="citation">(<a href="#ref-cdc_leptospirosis">Centers for Disease Control and Prevention 2025</a>)</span>.</p></li>
+<li><p>Leptospira species are highly adaptable bacteria capable of surviving in both host organisms and environmental reservoirs such as water and soil.</p></li>
+</ol>
 </div>
-<div id="heatmap" class="section level2 unnumbered hasAnchor">
-<h2>Heatmap<a href="ggplot2-ravenplot.html#heatmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="ggplot2-ravenplot.html#cb65-1" tabindex="-1"></a>corr <span class="ot">&lt;-</span> <span class="fu">cor</span>(mtcars)</span>
-<span id="cb65-2"><a href="ggplot2-ravenplot.html#cb65-2" tabindex="-1"></a></span>
-<span id="cb65-3"><a href="ggplot2-ravenplot.html#cb65-3" tabindex="-1"></a>corr_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">as.table</span>(corr))</span>
-<span id="cb65-4"><a href="ggplot2-ravenplot.html#cb65-4" tabindex="-1"></a></span>
-<span id="cb65-5"><a href="ggplot2-ravenplot.html#cb65-5" tabindex="-1"></a><span class="fu">ggplot</span>(corr_df, <span class="fu">aes</span>(Var1, Var2, <span class="at">fill =</span> Freq)) <span class="sc">+</span></span>
-<span id="cb65-6"><a href="ggplot2-ravenplot.html#cb65-6" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
-<span id="cb65-7"><a href="ggplot2-ravenplot.html#cb65-7" tabindex="-1"></a>  <span class="fu">scale_fill_gradientn</span>(</span>
-<span id="cb65-8"><a href="ggplot2-ravenplot.html#cb65-8" tabindex="-1"></a>    <span class="at">colours =</span> <span class="fu">get_raven_palette</span>(<span class="st">&quot;witchy_heatmap&quot;</span>)</span>
-<span id="cb65-9"><a href="ggplot2-ravenplot.html#cb65-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb65-10"><a href="ggplot2-ravenplot.html#cb65-10" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb65-11"><a href="ggplot2-ravenplot.html#cb65-11" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Heatmap&quot;</span>,</span>
-<span id="cb65-12"><a href="ggplot2-ravenplot.html#cb65-12" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Motor trend correlations&quot;</span>,</span>
-<span id="cb65-13"><a href="ggplot2-ravenplot.html#cb65-13" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb65-14"><a href="ggplot2-ravenplot.html#cb65-14" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb65-15"><a href="ggplot2-ravenplot.html#cb65-15" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb65-16"><a href="ggplot2-ravenplot.html#cb65-16" tabindex="-1"></a>  <span class="fu">theme_raven</span>(</span>
-<span id="cb65-17"><a href="ggplot2-ravenplot.html#cb65-17" tabindex="-1"></a>    <span class="at">background_type =</span> <span class="st">&quot;vintage&quot;</span>,</span>
-<span id="cb65-18"><a href="ggplot2-ravenplot.html#cb65-18" tabindex="-1"></a>    <span class="at">font_theme =</span> <span class="st">&quot;elegant&quot;</span>,</span>
-<span id="cb65-19"><a href="ggplot2-ravenplot.html#cb65-19" tabindex="-1"></a>    <span class="at">color_theme =</span> <span class="st">&quot;witchy&quot;</span>,</span>
-<span id="cb65-20"><a href="ggplot2-ravenplot.html#cb65-20" tabindex="-1"></a>    <span class="at">major_grid =</span> <span class="cn">FALSE</span></span>
-<span id="cb65-21"><a href="ggplot2-ravenplot.html#cb65-21" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb65-22"><a href="ggplot2-ravenplot.html#cb65-22" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb65-23"><a href="ggplot2-ravenplot.html#cb65-23" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
-<span id="cb65-24"><a href="ggplot2-ravenplot.html#cb65-24" tabindex="-1"></a>  )</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
-
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-cdc_leptospirosis" class="csl-entry">
+Centers for Disease Control and Prevention. 2025. <span>“Leptospirosis.”</span> <a href="https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/leptospirosis.html">https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/leptospirosis.html</a>.
+</div>
+<div id="ref-garcia_lopez_2024" class="csl-entry">
+Garcia-Lopez, Marta, Thibaut Lurier, Marie Bouilloud, et al. 2024. <span>“Prevalence, Genetic Diversity and Eco-Epidemiology of Pathogenic Leptospira Species in Small Mammal Communities in Urban Parks Lyon City, France.”</span> <em>PLOS ONE</em> 19 (4): e0300523. <a href="https://doi.org/10.1371/journal.pone.0300523">https://doi.org/10.1371/journal.pone.0300523</a>.
+</div>
+<div id="ref-ko_2009" class="csl-entry">
+Ko, Albert I., Cyrille Goarant, and Mathieu Picardeau. 2009. <span>“Leptospira: The Dawn of the Molecular Genetics Era for an Emerging Zoonotic Pathogen.”</span> <em>Nature Reviews Microbiology</em> 7 (10): 736–47. <a href="https://doi.org/10.1038/nrmicro2208">https://doi.org/10.1038/nrmicro2208</a>.
+</div>
+<div id="ref-ncbi_nbk441858" class="csl-entry">
+National Center for Biotechnology Information. 2024. <em>NCBI Bookshelf</em>. <a href="https://www.ncbi.nlm.nih.gov/books/NBK441858/">https://www.ncbi.nlm.nih.gov/books/NBK441858/</a>.
+</div>
+<div id="ref-wilkinson_2021" class="csl-entry">
+Wilkinson, David A. et al. 2021. <span>“Identification of Pathogenic Leptospira Species and Serovars Using a Partial glmU Gene Sequence.”</span> <em>PLoS Neglected Tropical Diseases</em> 15 (9): e0009738. <a href="https://doi.org/10.1371/journal.pntd.0009738">https://doi.org/10.1371/journal.pntd.0009738</a>.
 </div>
 </div>
             </section>
@@ -343,8 +306,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="reproducible-science.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

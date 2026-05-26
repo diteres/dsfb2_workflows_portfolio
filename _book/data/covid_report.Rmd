@@ -1,0 +1,187 @@
+---
+title: "COVID-19 Report"
+output: html_document
+runtime: shiny
+---
+## Report: The number of COVID-19 cases in Europe 
+
+This report allows the user to choose a country, year, and one or more months. The summary and graph update automatically based on the selected values.
+
+Data source: [European Centre for Disease Prevention and Control. Data on the daily number of new reported COVID-19 cases and deaths by EU/EEA country](https://www.ecdc.europa.eu/en/publications-data/data-daily-new-cases-covid-19-eueea-country)
+
+```{r, echo=FALSE, include=FALSE}
+library(tidyverse)
+library(shiny)
+library(scales)
+```
+
+```{r, echo=FALSE}
+covid_data <- read.csv("https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv", na.strings = "") %>%
+  mutate(
+    date = as.Date(dateRep, format = "%d/%m/%Y"),
+    day = as.integer(day),
+    month = as.integer(month),
+    year = as.integer(year),
+    cases = as.numeric(cases),
+    deaths = as.numeric(deaths))
+```
+
+This report allows the user to choose a country, year, and one or more months.  
+The summary and graph update automatically based on the selected values.
+
+```{r, echo=FALSE}
+selectInput(
+  inputId = "country",
+  label = "Choose a country:",
+  choices = sort(unique(covid_data$countriesAndTerritories)),
+  selected = "Netherlands"
+)
+selectInput(
+  inputId = "year_selected",
+  label = "Choose a year:",
+  choices = sort(unique(covid_data$year)),
+  selected = 2021
+)
+checkboxGroupInput(
+  inputId = "months_selected",
+  label = "Choose one or more months:",
+  choices = setNames(1:12, month.name),
+  selected = 7
+)
+```
+
+
+```{r, echo=FALSE}
+filtered_data <- reactive({
+  req(input$country)
+  req(input$year_selected)
+  req(input$months_selected)
+
+  covid_data %>%
+    filter(
+      countriesAndTerritories == input$country,
+      year == as.numeric(input$year_selected),
+      month %in% as.numeric(input$months_selected)
+    ) %>%
+    arrange(date)
+})
+```
+
+## Summary
+
+```{r, echo=FALSE}
+renderTable({
+  selected_data <- filtered_data()
+
+  tibble(
+    Country = input$country,
+    Year = input$year_selected,
+    Months = paste(month.name[as.numeric(input$months_selected)], collapse = ", "),
+    `Number of days with data` = nrow(selected_data),
+    `Total COVID-19 cases` = sum(selected_data$cases, na.rm = TRUE),
+    `Total COVID-19 deaths` = sum(selected_data$deaths, na.rm = TRUE)
+  )
+})
+```
+
+## Daily COVID-19 Cases Graph
+
+```{r, echo=FALSE}
+renderPlot({
+  ggplot(filtered_data(), aes(x = date, y = cases)) +
+    geom_line(color = "#3EB9A8", linewidth = 1) +
+    labs(
+      title = paste("Daily COVID-19 Cases in", input$country),
+      subtitle = paste(
+        "Year:", input$year_selected,
+        "| Month(s):",
+        paste(month.name[as.numeric(input$months_selected)], collapse = ", ")
+      ),
+      x = "Date",
+      y = "Number of cases"
+    ) +
+    theme_minimal()
+})
+```
+## Daily COVID-19-Related Deaths Graph
+```{r, echo=FALSE}
+renderPlot({
+  ggplot(filtered_data(), aes(x = date, y = deaths)) +
+    geom_line(color = "#7F1734", linewidth = 1) +
+    labs(
+      title = paste("Daily COVID-19 Deaths in", input$country),
+      subtitle = paste(
+        "Year:", input$year_selected,
+        "| Month(s):",
+        paste(month.name[as.numeric(input$months_selected)], collapse = ", ")
+      ),
+      x = "Date",
+      y = "Number of deaths"
+    ) +
+    theme_minimal() +
+    scale_x_date(date_labels = "%d %b")
+})
+```
+
+## Daily COVID-19 Cases and Deaths Graph
+```{r, echo=FALSE}
+renderPlot({
+
+  plot_data <- filtered_data() %>%
+    select(date, cases, deaths) %>%
+    pivot_longer(
+      cols = c(cases, deaths),
+      names_to = "type",
+      values_to = "count"
+    ) %>%
+    mutate(
+      type = recode(
+        type,
+        cases = "COVID-19 Cases",
+        deaths = "COVID-19 Deaths"
+      )
+    )
+  ggplot(plot_data, aes(x = date, y = count, fill = type)) +
+    geom_col(position = "dodge") +
+    labs(
+      title = paste("COVID-19 Cases and Deaths in", input$country),
+      subtitle = paste(
+        "Year:", input$year_selected,
+        "| Month(s):",
+        paste(
+          month.name[as.numeric(input$months_selected)],
+          collapse = ", ")
+      ),
+      x = "Date",
+      y = "Count",
+      fill = "Category"
+    ) +
+    scale_fill_manual(
+      values = c(
+        "COVID-19 Cases" = "#3EB9A8",
+        "COVID-19 Deaths" = "#7F1734"
+      )
+    ) +
+    scale_x_date(date_labels = "%d %b") +
+    scale_y_continuous(labels = comma) +
+    theme_minimal()
+})
+```
+
+# Interpretation
+
+```{r, echo=FALSE}
+renderText({
+  selected_data <- filtered_data()
+  paste(
+    "For", input$country, "in", input$year_selected,
+    "during", paste(month.name[as.numeric(input$months_selected)], collapse = ", "),
+    "there are", nrow(selected_data), "days of data.",
+    "The total number of confirmed COVID-19 cases is",
+    comma(sum(selected_data$cases, na.rm = TRUE)),
+    "and the total number of COVID-19-related deaths is",
+    comma(sum(selected_data$deaths, na.rm = TRUE)), "."
+  )
+})
+```
+

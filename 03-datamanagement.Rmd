@@ -1,0 +1,246 @@
+# Data management {-}
+
+This part of my portfolio is intended to demonstrate that I am capable of managing data in data-heavy projects. As an example, the `daur2_rna_seq_opdracht` directory (which is part of the DAUR2 course at Hogeschool Utrecht) is used. It is an RNA sequencing assignment that included many different components and required careful data management and documentation in a README file.
+
+Below is the directory tree for the `daur2_rna_seq_opdracht` folder, generated using the `fs` package in R. 
+
+```{r dir_tree, echo=FALSE, fig.cap='daur2_rna_seq_opdracht directory tree', out.width='80%', fig.align='left'}
+knitr::include_graphics("images/dir_tree_portfolio.png")
+```
+
+```{r readme, echo=FALSE, out.width='80%', fig.align='left', fig.cap='daur2_rna_seq_opdracht README file'}
+knitr::include_graphics("images/readme.png")
+```
+
+This portfolio is not a classic data analysis project. It was created using the bookdown package, which requires a specific folder structure, so the organization of the portfolio may appear somewhat chaotic. Due to the size of the portfolio, it is impossible to capture the entire structure in a screenshot, so below is the output of the fs::dir_tree("/home/diana.tereshchenko/dsfb2_workflows_portfolio/") command:
+
+/home/diana.tereshchenko/dsfb2_workflows_portfolio/
+
+├── 01-CV.Rmd
+
+├── 02-enrichmentanalysis.Rmd
+
+├── 03-datamanagement.Rmd
+
+├── 04-reproduciblescience.Rmd
+
+├── 05-ravenplot.Rmd
+
+├── 06-parameterizedrmarkdown.Rmd
+
+├── 07-project-leptospira.Rmd
+
+├── DESCRIPTION
+
+├── Dockerfile
+
+├── LICENSE
+
+├── _book
+
+│   ├── 404.html
+
+│   ├── _main_files
+
+│   │   └── figure-html
+
+│   │       ├── unnamed-chunk-1-1.png
+
+│   │       ├── unnamed-chunk-10-1.png
+
+│   │       ├── unnamed-chunk-10-2.png
+
+│   │       ├── unnamed-chunk-13-1.png
+
+│   │       ├── unnamed-chunk-15-1.png
+
+│   │       ├── unnamed-chunk-16-1.png
+
+│   │       ├── unnamed-chunk-18-1.png
+
+│   │       ├── unnamed-chunk-2-1.png
+
+│   │       ├── unnamed-chunk-20-1.png
+
+│   │       ├── unnamed-chunk-21-1.png
+
+│   │       ├── unnamed-chunk-22-1.png
+
+│   │       ├── unnamed-chunk-23-1.png
+
+│   │       ├── unnamed-chunk-3-1.png
+
+│   │       ├── unnamed-chunk-4-1.png
+
+│   │       ├── unnamed-chunk-8-1.png
+
+│   │       └── unnamed-chunk-8-2.png
+
+│   ├── comparison-of-ora-and-gsea-workflows-for-rna-seq-enrichment-analysis-in-r.html
+
+│   ├── data
+
+│   │   ├── covid_report.Rmd
+
+│   │   └── leptospira_picture.png
+
+│   ├── data-management.html
+
+│   ├── ggplot2-ravenplot.html
+
+│   ├── images
+
+│   │   ├── dir_tree_portfolio.png
+
+│   │   ├── original_graph_from_gc_paper.png
+
+│   │   └── readme.png
+
+│   ├── index.html
+
+│   ├── libs
+
+│   │   ├── anchor-sections-1.1.0
+
+│   │   │   ├── anchor-sections-hash.css
+
+│   │   │   ├── anchor-sections.css
+
+│   │   │   └── anchor-sections.js
+
+│   │   ├── gitbook-2.6.7
+
+│   │   │   ├── css
+
+│   │   │   │   ├── fontawesome
+
+│   │   │   │   │   └── fontawesome-webfont.ttf
+
+│   │   │   │   ├── plugin-bookdown.css
+
+│   │   │   │   ├── plugin-clipboard.css
+
+│   │   │   │   ├── plugin-fontsettings.css
+
+│   │   │   │   ├── plugin-highlight.css
+
+│   │   │   │   ├── plugin-search.css
+
+│   │   │   │   ├── plugin-table.css
+
+│   │   │   │   └── style.css
+
+│   │   │   └── js
+
+│   │   │       ├── app.min.js
+
+│   │   │       ├── clipboard.min.js
+
+│   │   │       ├── jquery.highlight.js
+
+│   │   │       ├── plugin-bookdown.js
+
+│   │   │       ├── plugin-clipboard.js
+
+│   │   │       ├── plugin-fontsettings.js
+
+│   │   │       ├── plugin-search.js
+
+│   │   │       └── plugin-sharing.js
+
+│   │   └── jquery-3.6.0
+
+│   │       └── jquery-3.6.0.min.js
+
+│   ├── parameterized-rmarkdown-report-the-number-of-covid-19-cases-in-europe.html
+
+│   ├── professional-profile-career-vision.html
+
+│   ├── project-leptospira.html
+
+│   ├── reference-keys.txt
+
+│   ├── references.html
+
+│   ├── reproducible-science.html
+
+│   ├── search_index.json
+
+│   ├── style.css
+
+│   └── toc.css
+
+├── _main_files
+
+│   └── figure-html
+
+│       ├── unnamed-chunk-1-1.png
+
+│       ├── unnamed-chunk-10-1.png
+
+│       ├── unnamed-chunk-10-2.png
+
+│       ├── unnamed-chunk-13-1.png
+
+│       ├── unnamed-chunk-15-1.png
+
+│       ├── unnamed-chunk-16-1.png
+
+│       ├── unnamed-chunk-18-1.png
+
+│       ├── unnamed-chunk-2-1.png
+
+│       ├── unnamed-chunk-20-1.png
+
+│       ├── unnamed-chunk-21-1.png
+
+│       ├── unnamed-chunk-22-1.png
+
+│       ├── unnamed-chunk-23-1.png
+
+│       ├── unnamed-chunk-3-1.png
+
+│       ├── unnamed-chunk-4-1.png
+
+│       ├── unnamed-chunk-8-1.png
+
+│       └── unnamed-chunk-8-2.png
+
+├── book.bib
+
+├── bookdown-demo.Rproj
+
+├── data
+
+│   ├── CE.LIQ.FLOW.062_Tidydata.xlsx
+
+│   ├── TogglTrack_Report_Detailed_report.pdf
+
+│   ├── covid_report.Rmd
+
+│   ├── leptospira_picture.png
+
+│   ├── onecut_sampledata_OC1.csv
+
+│   └── read_counts_OC1.rds
+
+├── images
+
+│   ├── dir_tree_portfolio.png
+
+│   ├── original_graph_from_gc_paper.png
+
+│   └── readme.png
+
+├── index.Rmd
+
+├── now.json
+
+├── packages.bib
+
+├── preamble.tex
+
+├── style.css
+
+└── toc.css
+> 

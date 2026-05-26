@@ -1,3 +1,0 @@
-# ggplot2: ravenplot {-}
-
-A ggplot2 extension package providing fantasy-inspired themes, color palettes, and typography settings for atmospheric data visualizations.

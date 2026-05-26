@@ -1,0 +1,131 @@
+# ggplot2: ravenplot {-}
+
+A ggplot2 extension package providing fantasy-inspired themes, color palettes, and typography settings for atmospheric data visualizations.
+
+The `ravenplot` package extends ggplot2 by providing:
+
+- 10 color palettes: "vampire", "vampire_heatmap", "chocolate", "chocolate_heatmap", "witchy", "witchy_heatmap", "lotus", "lotus_heatmap", "tealish", "tealish_heatmap" 
+
+``` {r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library("ravenplot")
+library("tidyverse")
+library(patchwork)
+load_raven_fonts()
+
+plot_palette <- function(palette_name) {
+
+  colors <- get_raven_palette(palette_name)
+
+  df <- data.frame(
+    x = seq_along(colors),
+    y = 1,
+    col = colors
+  )
+
+  ggplot(df, aes(x, y, fill = col)) +
+    geom_tile() +
+    scale_fill_identity() +
+    labs(
+      title = paste("Palette:", palette_name)
+    ) +
+    theme_void() +
+    theme(
+      plot.title = element_text(hjust = 0.5)
+    )
+}
+
+p1_1 <- plot_palette("vampire")
+p1_2 <- plot_palette("vampire_heatmap")
+
+p2_1 <- plot_palette("witchy")
+p2_2 <- plot_palette("witchy_heatmap")
+
+p3_1 <- plot_palette("tealish")
+p3_2 <- plot_palette("tealish_heatmap")
+
+p4_1 <- plot_palette("lotus")
+p4_2 <- plot_palette ("lotus_heatmap")
+
+p5_1 <- plot_palette("chocolate")
+p5_2 <- plot_palette("chocolate_heatmap")
+
+(p1_1 | p1_2) / (p2_1 | p2_2) / (p3_1 | p3_2) / (p4_1 | p4_2) / (p5_1 | p5_2)
+
+```
+
+- 7 point styles (Unicode-based symbols): "rhombus", "sun", "heart", "circle", "square", "triangle", "diamond"
+
+- 4 font themes: "fancy", "elegant", "simple", "standard"
+
+- 2 background themes: "transparent", "vintage"
+
+## Scatter plot {-}
+
+``` {r}
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
+  geom_raven_point(dot_type = "heart", size = 5) +
+  scale_color_manual(values = get_raven_palette("vampire")) +
+  labs(
+    title = "Scatter Plot",
+    subtitle = "Raven points with vampire palette",
+    x = "Weight",
+    y = "MPG"
+  ) +
+  theme_raven(
+    background_type = "vintage",
+    font_theme = "fancy",
+    color_theme = "vampire"
+  ) 
+```
+
+## Bar plot {-}
+
+```{r}
+
+ggplot(mpg, aes(class, fill = class)) +
+  geom_bar() +
+  scale_fill_manual(values = get_raven_palette("tealish")) +
+  labs(
+    title = "Bar Plot",
+    subtitle = "Vehicle classes",
+    x = "Class",
+    y = "Count"
+  ) +
+  theme_raven(
+    background_type = "vintage",
+    font_theme = "elegant",
+    color_theme = "tealish",
+    major_grid = FALSE
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Heatmap {-}
+
+```{r}
+corr <- cor(mtcars)
+
+corr_df <- as.data.frame(as.table(corr))
+
+ggplot(corr_df, aes(Var1, Var2, fill = Freq)) +
+  geom_tile() +
+  scale_fill_gradientn(
+    colours = get_raven_palette("witchy_heatmap")
+  ) +
+  labs(
+    title = "Heatmap",
+    subtitle = "Motor trend correlations",
+    x = "",
+    y = ""
+  ) +
+  theme_raven(
+    background_type = "vintage",
+    font_theme = "elegant",
+    color_theme = "witchy",
+    major_grid = FALSE
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```

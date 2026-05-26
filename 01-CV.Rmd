@@ -1,0 +1,46 @@
+# Professional Profile & Career Vision {-}
+
+## Curriculum vitae {-}
+
+### About {-}
+Undergraduate student in Biomolecular Research, currently pursuing minor in Data Science. 
+
+During my studies, I have gained some hands-on experience with biomolecular laboratory techniques such as PCR, gel electrophoresis, Western blotting, cell culture, histology techniques, and bright-field and fluorescence microscopy. I also learned the basics of programming languages such as R and Bash and worked on projects involving their practical application. 
+
+I enjoy exploring data, creating visualizations, and learning new tools and techniques. 
+
+### Education {-}
+Hogeschool Utrecht - Life Sciences (BSc), expected graduation: 2027
+
+* Specialization: Biomolecular Research 
+* Minor: Data Science
+
+## Current Position & Future Direction {-}
+
+### Current position {-}
+
+During my studies, I have gained hands-on experience with biomolecular laboratory techniques such as PCR, gel electrophoresis, Western blotting, cell culture, histological techniques, and bright-field and fluorescence microscopy.
+
+At the moment, I am also pursuing a minor in Data Science to develop and strengthen my computational skills. I have experience working with R, Bash, and GitHub in collaborative projects settings.
+
+### Short-Term Perspective (1–3 Years) {-} 
+In the coming years, I aim to pursue a pre-master’s and master’s degree in either chemistry or genomics. Choosing chemistry would allow me to develop a broader perspective on research and develop a wider worldview in general. At the same time, I simply adore genomics. 
+
+I have not yet decided which path I will choose, but I hope that during my 10-month internship (which I am still searching for) I will have enough time to make my decision about my academic future.
+
+### Long-Term Perspective (3–10 Years) {-}
+
+From a longer-term perspective, I aspire to work in academic or applied research where I can combine both dry- and wet-lab approaches. I am particularly interested in experimental design and hope to contribute to innovative research environments that combine analytical thinking with creative problem-solving.
+
+### Areas for Further Development {-}
+
+* Professional networking and communication 
+
+* Advanced genomics and transcriptomics analysis - currently being developed (see "Project Leptospira" and "Comparison of ORA and GSEA Workflows for RNA-seq Enrichment Analysis in R")
+
+* Scientific writing and presentation skills 
+
+## Contact {-}
+You can reach me at: [diana.tereshchenko.d@gmail.com](mailto:diana.tereshchenko.d@gmail.com)
+
+GitHub: [github.com/diteres](https://github.com/diteres)
